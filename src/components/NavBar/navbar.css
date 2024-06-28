@@ -1,0 +1,32 @@
+@media (max-width: 1060px) {
+  .content {
+    display: flex !important;
+    position: absolute;
+    flex-direction: column;
+    right: -35vw;
+    width: 35vw;
+    height: 100vh;
+    top: 56px;
+    transition: all 0.8s ease-in-out;
+  }
+  .MenuIcon.open + .content {
+    right: 0;
+
+    background: rgba(79, 69, 88, 0.262);
+  }
+  .content a {
+    margin: 0 !important;
+    margin: 20px 0 !important;
+    text-align: center;
+  }
+  .content a:hover {
+    background-color: #00000000;
+  }
+}
+
+a {
+  cursor: none;
+}
+.content a:hover {
+  background-color: #4d4d4d58;
+}
