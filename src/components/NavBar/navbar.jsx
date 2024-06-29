@@ -15,27 +15,27 @@ const Navbar = () => {
         </div>
         <MenuIcon />
         <div className="content hidden lm:flex space-x-8">
-          <a href="#" className="text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#" className=" hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             About
           </a>
-          <a href="#" className="text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#" className=" hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Events
           </a>
-          <a href="#" className="text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#" className=" hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Alumini
           </a>
-          <a href="#" className="text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#" className=" hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Sponsors
           </a>
-          <a href="#" className="text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#" className=" hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Contact Us
           </a>
         </div>
         <div className="absolute right-20 flex items-center border-gray-500 border-3 rounded-3xl p-0.5">
-          <a href="#" className="text-white hover:bg-gradient-to-r from-purple-950 to-purple-500 hover:text-white rounded-2xl px-4 py-1 font-bold transition-all duration-300">
+          <a href="#" className=" hover:bg-gradient-to-r from-sky-800 to-cyan-500 hover:text-white rounded-2xl px-4 py-1 font-bold transition-all duration-300">
             Login
           </a>
-          <a href="/register" className="text-white hover:bg-gradient-to-r from-purple-950 to-purple-500 hover:text-white rounded-2xl px-4 py-1 font-bold transition-all duration-300">
+          <a href="/register" className=" hover:bg-gradient-to-r from-sky-800 to-cyan-500 hover:text-white rounded-2xl px-4 py-1 font-bold transition-all duration-300">
             Register
           </a>
         </div>

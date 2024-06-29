@@ -8,10 +8,10 @@
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: rgba(200, 171, 213, 0.5); /* Translucent white */
+  background-color: rgba(208, 230, 235, 0.5); /* Translucent white */
   border-radius: 50%;
   pointer-events: none;
-  box-shadow: 0 0 10px rgba(84, 0, 101, 0.8);
+  box-shadow: 0 0 10px rgba(0, 145, 255, 0.8);
   transform: translate(-50%, -50%);
   transition:
     transform 0.1s ease-out,
