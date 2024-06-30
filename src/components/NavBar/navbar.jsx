@@ -8,8 +8,8 @@ const Navbar = () => {
     <nav className="p-4 w-full h-14 flex items-center fixed top-0 left-0 shadow-md ">
       <div className="container mx-auto flex justify-center items-center">
         <div className="flex items-center absolute left-16">
-          <img src="/public/sds.png" className="w-10" alt="SDS Logo" />
-          <a href="/" className="text-white text-lg font-bold">
+          <img src="/sds.png" className="w-10" alt="SDS Logo" />
+          <a href="/" className="text-black text-lg font-bold">
             SDS
           </a>
         </div>
