@@ -3,7 +3,7 @@ import "./Footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
   const sendEmail = () => {}
@@ -37,7 +37,7 @@ const Footer = () => {
                 <ul className="social-links">
                   <li>
                     <a href="https://www.facebook.com/Society-for-Data-Science-BIT-Mesra-107499150681960">
-                      <FontAwesomeIcon icon={faFacebook} />
+                      <FontAwesomeIcon icon={faSquareFacebook} />
                     </a>
                   </li>
                   <li>
