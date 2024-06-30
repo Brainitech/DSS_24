@@ -55,23 +55,23 @@ function Hero() {
           </h2>
           <hr className="h-[1px] bg-white w-full" />
           <h3 className="mt-8 mb-4">Countdown To The E-Summit:</h3>
-          <div className="flex flex-row justify-between gap-3 items-center w-full text-center text-[20px]">
-            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px] w-full">
+          <div className="flex flex-row justify-between gap-3 items-center text-center text-[20px]">
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
             </div>
-            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px] w-full">
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
             </div>
-            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px] w-full">
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
             </div>
-            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px] w-full">
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
