@@ -1,7 +1,6 @@
 :root {
   cursor: none;
 }
-
 .cursor {
   position: fixed;
   top: 0;
@@ -13,9 +12,7 @@
   pointer-events: none;
   box-shadow: 0 0 10px rgba(0, 145, 255, 0.8);
   transform: translate(-50%, -50%);
-  transition:
-    transform 0.1s ease-out,
-    opacity 0.2s ease-out;
+  transition: transform 0.1s ease-out, opacity 0.2s ease-out;
   z-index: 9999; /* Make sure it stays on top */
 }
 

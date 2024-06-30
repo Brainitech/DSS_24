@@ -13,7 +13,7 @@ const Footer = () => {
   }
 
   return (
-    <body>
+    <>
       <footer id="footer">
         <div id="contact">
           <div>
@@ -75,7 +75,7 @@ const Footer = () => {
           Copyright ©2024 All rights reserved | <span style={{ color: "white" }}>Society for Data Science</span>
         </div>
       </footer>
-    </body>
+    </>
   )
 }
 
