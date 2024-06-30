@@ -18,6 +18,7 @@
     margin: 0 !important;
     margin: 20px 0 !important;
     text-align: center;
+    z-index: 1;
   }
   .content a:hover {
     background-color: #00000000;
