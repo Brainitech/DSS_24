@@ -2,8 +2,8 @@ import React from "react"
 import "./Footer.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram } from "@fortawesome/free-brands-svg-icons"
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 const Footer = () => {
   const sendEmail = () => {}
@@ -37,12 +37,12 @@ const Footer = () => {
                 <ul className="social-links">
                   <li>
                     <a href="https://www.facebook.com/Society-for-Data-Science-BIT-Mesra-107499150681960">
-                      <FontAwesomeIcon icon={faFacebookF} />
+                      <FontAwesomeIcon icon={faFacebook} />
                     </a>
                   </li>
                   <li>
                     <a href="https://www.linkedin.com/company/society-for-data-science-bit-mesra">
-                      <FontAwesomeIcon icon={faLinkedinIn} />
+                      <FontAwesomeIcon icon={faLinkedin} />
                     </a>
                   </li>
                   <li>
