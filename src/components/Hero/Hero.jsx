@@ -19,7 +19,7 @@ function Hero() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-black to-blue-900 w-[100vw]">
+    <div className="bg-gradient-to-b from-black to-blue-900 w-[100vw] pb-8">
       <div className="lm:px-4 px-10 lm:py-0 py-20 text-center gap-5 lm-text-start flex lm:flex-row flex-col-reverse justify-between lm:gap-28 items-center mb-8 ">
         <div className="h-full lm:py-20 lm:ml-20 flex flex-col justify-center lm:items-start items-center text-white text-start">
           <h2 className="text-[54px] lm:p-0 font-semibold mb-2 leading-loading text-blue-800 headingcontent text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-300">
@@ -37,7 +37,7 @@ function Hero() {
         </div>
         <img src={img} className="" alt="" />
       </div>
-      <div className="lm:mx-40 mx-10 lm:my-0 my-20 text-center gap-5 lm-text-start grid lm:grid-cols-2 grid-cols-1 lm:gap-28 items-center border-white border-2 rounded-xl p-20 bg-gradient-to-r from-purple-900 via-blue-950 to-black ">
+      <div className="lm:mx-40 mx-10 lm:my-0 my-20 text-center gap-5 lm-text-start grid lm:grid-cols-2 grid-cols-1 lm:gap-28 items-center border-white border-2 rounded-xl p-20 bg-gradient-to-r from-purple-900 via-blue-950 to-black">
         <div className="h-full flex flex-col justify-center lm:items-start items-center text-white text-start">
           <h2 className="text-[30px] font-semibold mb-2 leading-loading uppercase text-white">Data Science Summit'24</h2>
           <p className="mt-2 text-[10px]">
