@@ -19,10 +19,10 @@ function Hero() {
   }
 
   return (
-    <div className="bg-gradient-to-b from-black to-blue-900">
-      <div className="lg:px-4 px-10 lg:py-0 py-20 text-center gap-5 lg-text-start flex lg:flex-row flex-col-reverse justify-between lg:gap-28 items-center mb-8 ">
-        <div className="h-full lg:py-20 ml-20 p-8 flex flex-col justify-center lg:items-start items-center text-white text-start">
-          <h2 className="text-[54px] font-semibold mb-2 leading-loading text-blue-800 headingcontent text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-300">
+    <div className="bg-gradient-to-b from-black to-blue-900 w-[100vw] pb-8">
+      <div className="lm:px-4 px-10 lm:py-0 py-20 text-center gap-5 lm-text-start flex lm:flex-row flex-col-reverse justify-between lm:gap-28 items-center mb-8 ">
+        <div className="h-full lm:py-20 lm:ml-20 flex flex-col justify-center lm:items-start items-center text-white text-start">
+          <h2 className="text-[54px] lm:p-0 font-semibold mb-2 leading-loading text-blue-800 headingcontent text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-300">
             Data Science Summit'24
           </h2>
           <p className="mt-2 mb-8">
@@ -37,8 +37,8 @@ function Hero() {
         </div>
         <img src={img} className="" alt="" />
       </div>
-      <div className="lg:mx-40 mx-10 lg:my-0 my-20 text-center gap-5 lg-text-start grid lg:grid-cols-2 grid-cols-1 lg:gap-28 items-center border-white border-2 rounded-xl p-20 bg-gradient-to-r from-purple-900 via-blue-950 to-black ">
-        <div className="h-full flex flex-col justify-center lg:items-start items-center text-white text-start">
+      <div className="lm:mx-40 mx-10 lm:my-0 my-20 text-center gap-5 lm-text-start grid lm:grid-cols-2 grid-cols-1 lm:gap-28 items-center border-white border-2 rounded-xl p-20 bg-gradient-to-r from-purple-900 via-blue-950 to-black">
+        <div className="h-full flex flex-col justify-center lm:items-start items-center text-white text-start">
           <h2 className="text-[30px] font-semibold mb-2 leading-loading uppercase text-white">Data Science Summit'24</h2>
           <p className="mt-2 text-[10px]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam pariatur excepturi rem molestiae temporibus sint doloribus suscipit. Eaque dignissimos eveniet veritatis consectetur
@@ -49,34 +49,34 @@ function Hero() {
             <button className=" rounded-3xl w-full font-bold text-white ">See Event Catalouge</button>
           </section>
         </div>
-        <div className="h-full flex flex-col justify-center lg:items-center items-center text-white text-start ">
+        <div className="h-full flex flex-col justify-center lm:items-center items-center text-white text-start ">
           <h2 className="text-[32px] font-semibold mb-8 leading-loading text-blue-800 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-300 headingcontent1">
             2nd - 3rd Dec , 2024
           </h2>
           <hr className="h-[1px] bg-white w-full" />
           <h3 className="mt-8 mb-4">Countdown To The E-Summit:</h3>
-          <ul className="grid grid-cols-4 gap-8 text-center text-[20px]">
-            <li className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px] px-2">
+          <div className="flex flex-row justify-between gap-3 items-center text-center text-[20px]">
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
-            </li>
-            <li className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
+            </div>
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
-            </li>
-            <li className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
+            </div>
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
-            </li>
-            <li className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
+            </div>
+            <div className="bg-gradient-to-b from-blue-600 via-blue-900 to-purple-950 leading-tight rounded-[3px]">
               64
               <br />
               days
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
