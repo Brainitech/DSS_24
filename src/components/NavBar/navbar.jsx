@@ -1,11 +1,31 @@
-import React from "react"
-
+import React, { useState, useEffect } from "react"
 import MenuIcon from "./MenuIcon/MenuIcon"
 import "./navbar.css"
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false)
+
+  const handleScroll = () => {
+    const offset = window.scrollY
+    if (offset > 0) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  let navbarClasses = "p-4 w-full h-14 flex items-center fixed top-0 transition-all duration-500 "
+  navbarClasses += scrolled ? "bg-gray-900 bg-opacity-85 backdrop-blur-md" : "bg-transparent"
+
   return (
-    <nav className="p-4 w-full h-14 flex items-center fixed top-0 left-0 shadow-md ">
+    <nav className={navbarClasses}>
       <div className="container mx-auto flex justify-center items-center">
         <div className="flex items-center absolute left-16">
           <img src="/sds.png" className="w-10" alt="SDS Logo" />
@@ -22,7 +42,7 @@ const Navbar = () => {
             Events
           </a>
           <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
-            Alumini
+            Alumni
           </a>
           <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Sponsors
