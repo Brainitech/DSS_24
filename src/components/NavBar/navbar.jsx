@@ -21,7 +21,7 @@ const Navbar = () => {
     }
   }, [])
 
-  let navbarClasses = "p-4 w-full h-14 flex items-center fixed top-0 transition-all duration-300 "
+  let navbarClasses = "p-4 w-full h-14 flex items-center fixed top-0 transition-all duration-500 "
   navbarClasses += scrolled ? "bg-gray-900 bg-opacity-85 backdrop-blur-md" : "bg-transparent"
 
   return (
