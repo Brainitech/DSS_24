@@ -7,11 +7,11 @@ import "./hero.css"
 function Hero() {
 
   return (
-    <div className="bg-purple-950 w-[100vw] pb-8">
+    <div className="bg-gradient-to-b from-black via-purple-950 to-black w-screen pb-8">
       <div className="lm:px-4 px-10 lm:py-0 py-20 text-center gap-5 lm-text-start flex lm:flex-row flex-col-reverse justify-between lm:gap-28 items-center mb-8 ">
         <div className="h-full lm:py-20 lm:mx-20 flex flex-col justify-center lm:items-start items-center text-white lm:text-start w-[75%]">
           <div className="bg-slate-400 rounded-xl flex flex-row p-[2px] gap-3 justify-center items-center mb-6">
-            <button className="bg-slate-500 rounded-xl px-4">latest update</button>
+            <button className="bg-slate-500 rounded-xl lm:px-4">latest update</button>
             <h2>templates-loom,atlassian,notion and yours</h2>
             <MdArrowOutward className="mr-[6px]"/>
           </div>
@@ -32,12 +32,12 @@ function Hero() {
           <hr className="border-[1px] w-full" />
         </div>
         <div className="flex flex-row w-full justify-between mt-4">
-          <MdEmail className="w-12 h-12"/>
-          <MdEmail className="w-12 h-12"/>
-          <MdEmail className="w-12 h-12"/>
-          <MdEmail className="w-12 h-12"/>
-          <MdEmail className="w-12 h-12"/>
-          <MdEmail className="w-12 h-12"/>
+          <MdEmail className="w-12 h-12 text-white"/>
+          <MdEmail className="w-12 h-12 text-white"/>
+          <MdEmail className="w-12 h-12 text-white"/>
+          <MdEmail className="w-12 h-12 text-white"/>
+          <MdEmail className="w-12 h-12 text-white"/>
+          <MdEmail className="w-12 h-12 text-white"/>
 
         </div>
       </div>
