@@ -25,22 +25,6 @@ function Hero() {
             <button className=" rounded-[3px] px-6 border border-white font-bold text-white flex flex-row justify-center items-center gap-2">Register Now <FaArrowRight/></button>
         </div>
       </div>
-      <div className="lm:mx-20 mx-10 lm:my-0 my-20 text-center gap-5 lm:gap-28 items-center">
-        <div className="flex flex-row items-center justify-center gap-4">
-          <hr className="border-[1px] w-full" />
-          <h2 className="text-white font-bold w-full">Lorem ipsum dolor sit amet consectetur</h2>
-          <hr className="border-[1px] w-full" />
-        </div>
-        <div className="flex flex-row w-full justify-between mt-4">
-          <MdEmail className="w-12 h-12 text-white"/>
-          <MdEmail className="w-12 h-12 text-white"/>
-          <MdEmail className="w-12 h-12 text-white"/>
-          <MdEmail className="w-12 h-12 text-white"/>
-          <MdEmail className="w-12 h-12 text-white"/>
-          <MdEmail className="w-12 h-12 text-white"/>
-
-        </div>
-      </div>
     </div>
   )
 }
