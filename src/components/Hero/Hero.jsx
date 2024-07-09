@@ -1,5 +1,4 @@
 import React from "react"
-import { MdEmail} from "react-icons/md"
 import { FaArrowRight } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import "./hero.css"
