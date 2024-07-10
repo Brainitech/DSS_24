@@ -5,6 +5,7 @@ import CustomCursor from "./components/Cursor/CustomCursor.jsx"
 import Navbar from "./components/NavBar/navbar.jsx"
 import Hero from "./components/Hero/Hero.jsx"
 import Footer from "./components/Footer/footer.jsx"
+import Sponsors from "./components/Sponsors/Sponsors.jsx"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <CustomCursor />
       <Navbar />
       <Hero />
+      <Sponsors/>
       <Footer />
     </>
   )
