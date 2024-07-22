@@ -6,6 +6,7 @@ import Navbar from "./components/NavBar/navbar.jsx"
 import Hero from "./components/Hero/Hero.jsx"
 import Footer from "./components/Footer/footer.jsx"
 import Sponsors from "./components/Sponsors/Sponsors.jsx"
+import Speakers from "./components/Speakers/speakers.jsx"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <Sponsors/>
+      <Speakers/>
       <Footer />
     </>
   )
