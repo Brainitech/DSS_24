@@ -12,7 +12,7 @@
   .MenuIcon.open + .content {
     right: 0;
 
-    background: rgba(79, 69, 88, 0.262);
+    background: rgba(24, 20, 27, 0.693);
   }
   .content a {
     margin: 0 !important;
