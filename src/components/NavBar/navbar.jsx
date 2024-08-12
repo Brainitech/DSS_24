@@ -42,12 +42,9 @@ const Navbar = () => {
             Events
           </a>
           <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
-            Alumni
-          </a>
-          <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Sponsors
           </a>
-          <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#footer" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Contact Us
           </a>
         </div>

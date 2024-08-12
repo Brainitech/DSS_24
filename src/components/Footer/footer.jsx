@@ -5,7 +5,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons"
 
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 
 const Footer = () => {
   const sendEmail = () => {}
@@ -19,15 +19,18 @@ const Footer = () => {
       <footer id="footer">
         <div id="contact">
           <div>
-          <div class="footer-logo">
-                            <a href="index.html"><img src="sds.png" class="img-fluid" alt="logo"></img></a>
-                        </div>
-          
+            <div class="footer-logo">
+              <a href="index.html">
+                <img src="sds.png" class="img-fluid" alt="logo"></img>
+              </a>
+            </div>
+
             <div id="find-us" className="find-us">
-              
               <div>
-                <h4 className="title">Where to find Us   <FontAwesomeIcon icon={ faMapMarkerAlt } /></h4>
-                
+                <h4 className="title">
+                  Where to find Us <FontAwesomeIcon icon={faMapMarkerAlt} />
+                </h4>
+
                 <p>
                   Birla Institute of Technology, Mesra
                   <br />
@@ -73,30 +76,19 @@ const Footer = () => {
         </div>
         <br />
         <div className="first-panel mx-auto">
-          <a href="#">Back To Top</a>
+          <a href="">Back To Top</a>
         </div>
-        <div id ="copyright" class="copyright-area">
-        <div class="container">
+        <div id="copyright" class="copyright-area">
+          <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                    <div class="copyright-text">
-                        <p>Copyright &copy; 2018, All Right Reserved </p>
-                    </div>
+              <div class="col-xl-6 col-lg-6 text-center text-lg-left align-center">
+                <div class="copyright-text">
+                  <p>Copyright &copy; 2018, All Right Reserved </p>
                 </div>
-                <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                    <div class="footer-menu">
-                        <ul>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">Alumni</a></li>
-                            <li><a href="#">Sponsors</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
       </footer>
     </>
   )
