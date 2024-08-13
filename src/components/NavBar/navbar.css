@@ -11,7 +11,6 @@
   }
   .MenuIcon.open + .content {
     right: 0;
-
     background: rgba(24, 20, 27, 0.693);
   }
   .content a {
