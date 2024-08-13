@@ -19,9 +19,9 @@ const Footer = () => {
       <footer id="footer">
         <div id="contact">
           <div>
-            <div class="footer-logo">
+            <div className="footer-logo">
               <a href="index.html">
-                <img src="sds.png" class="img-fluid" alt="logo"></img>
+                <img src="sds.png" className="img-fluid" alt="logo"></img>
               </a>
             </div>
 
@@ -76,13 +76,13 @@ const Footer = () => {
         </div>
         <br />
         <div className="first-panel mx-auto">
-          <a href="">Back To Top</a>
+          <a href="#home">Back To Top</a>
         </div>
-        <div id="copyright" class="copyright-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-6 col-lg-6 text-center text-lg-left align-center">
-                <div class="copyright-text">
+        <div id="copyright" className="copyright-area">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-6 col-lg-6 text-center text-lg-left align-center">
+                <div className="copyright-text">
                   <p>Copyright &copy; 2018, All Right Reserved </p>
                 </div>
               </div>

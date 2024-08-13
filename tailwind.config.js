@@ -11,13 +11,14 @@ export default {
       },
       center: true,
       padding: "1rem",
-      screens: {
-        sm: "100%",
-        md: "100%",
-        lg: "1024px",
-        xl: "1280px",
-        lm: "1060px",
-      },
+      extend: {},
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
       animation: {
         marquee: "marquee 25s linear infinite",
         marquee2: "marquee2 25s linear infinite",
