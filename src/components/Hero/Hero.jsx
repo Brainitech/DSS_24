@@ -6,7 +6,7 @@ import "./hero.css"
 function Hero() {
 
   return (
-    <div className="bg-gradient-to-b from-black via-purple-950 to-black w-screen pb-8">
+    <div id="home" className="bg-gradient-to-b from-black via-purple-950 to-black w-screen pb-8">
       <div className="lm:px-4 px-10 lm:py-0 py-20 text-center gap-5 lm-text-start flex lm:flex-row flex-col-reverse justify-between lm:gap-28 items-center mb-8 ">
         <div className="h-full lm:py-20 lm:mx-20 flex flex-col justify-center lm:items-start items-center text-white lm:text-start w-[75%]">
           <div className="bg-slate-400 rounded-xl flex flex-row p-[2px] gap-3 justify-center items-center mb-6">

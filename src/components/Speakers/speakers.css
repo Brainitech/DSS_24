@@ -6,11 +6,7 @@
     flex-wrap: wrap;
     height: 12rem;
 }
-@media (min-width:735px){
-  .hello-there{
-    width: 85%;
-  }
-}
+
 .meet-speaker{
     text-align: center;
     padding: 2px;
@@ -311,6 +307,18 @@
 @media (max-width:850px){
   .custom-border{
     height: 80px;
+  }
+
+  .align{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-about-parent{
+    display: flex;
+    justify-content: center;
   }
 }
 @media (max-width:380px){
