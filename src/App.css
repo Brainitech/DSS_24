@@ -1,5 +1,6 @@
 :root {
   cursor: none;
+  scroll-behavior: smooth;
 }
 .cursor {
   position: fixed;

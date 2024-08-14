@@ -95,6 +95,7 @@ ul {
 .get-in-touch input[type="text"][placeholder="Your Message"] {
   height: 6rem;
   cursor: none;
+
 }
 
 .get-in-touch button {
@@ -213,7 +214,7 @@ ul {
     margin: 0rem;
   }
 }
-@media (max-width: 490px) {
+@media (max-width: 530px) {
   #footer {
     display: flex;
     align-items: center;
