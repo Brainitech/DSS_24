@@ -12,6 +12,7 @@ const Footer = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     sendEmail()
+    document.querySelectorAll("input").forEach((input) => (input.value = ""))
   }
 
   return (
