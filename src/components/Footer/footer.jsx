@@ -19,13 +19,13 @@ const Footer = () => {
       <footer id="footer">
         <div id="contact">
           <div>
-            <div className="footer-logo">
+            {/* <div className="footer-logo">
               <a href="index.html">
                 <img src="sds.png" className="img-fluid" alt="logo"></img>
               </a>
-            </div>
+            </div> */}
 
-            <div id="find-us" className="find-us">
+            <div id="find-us" className="find-us ml-2">
               <div>
                 <h4 className="title">
                   Where to find Us <FontAwesomeIcon icon={faMapMarkerAlt} />
