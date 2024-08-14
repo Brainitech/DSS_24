@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
       zIndex: {
         1: "1",
       },
@@ -12,16 +15,12 @@ export default {
       center: true,
       padding: "1rem",
       extend: {},
-    screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
-    },
-      animation: {
-        marquee: "marquee 25s linear infinite",
-        marquee2: "marquee2 25s linear infinite",
+      screens: {
+        "sm": "640px",
+        "md": "768px",
+        "lg": "1024px",
+        "xl": "1280px",
+        "2xl": "1536px",
       },
       keyframes: {
         marquee: {
@@ -29,9 +28,13 @@ export default {
           "100%": { transform: "translateX(-100%)" },
         },
         marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
+      },
+      animation: {
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee 25s linear infinite",
       },
     },
   },

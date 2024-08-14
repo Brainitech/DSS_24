@@ -54,7 +54,9 @@ export default function Speakers() {
   return (
     <div className="bg-gradient-to-b from-black via-purple-950 to-black w-screen pb-8">
       <div className="flex flex-col items-center mb-20" id="SPEAKERS">
-        <div className="pt-16 text-center text-4xl sm:text-5xl font-bold tracking-[-3px] font-krona bg-clip-text bg-gradient-to-r from-[#0055ff] to-[#04f8e8] text-transparent">Meet our speakers</div>
+        <div className="pt-16 text-center text-4xl sm:text-5xl font-bold font-montserrat tracking-[-3px] font-krona bg-clip-text bg-gradient-to-r from-[#0055ff] to-[#04f8e8] text-transparent">
+          Meet our speakers
+        </div>
         <div className="h-1 w-[18rem] sm:w-[25rem] mt-2 rounded-sm bg-gradient-to-r from-[#0055ff] to-[#04f8e8]"></div>
       </div>
       <div className="alumini1">
