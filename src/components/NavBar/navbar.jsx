@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import MenuIcon from "./MenuIcon/MenuIcon"
 import "./navbar.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faDownload } from "@fortawesome/free-solid-svg-icons"
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -49,6 +51,12 @@ const Navbar = () => {
           </a>
           <a href="#footer" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Contact Us
+          </a>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1CeJ60DROBXN3FVhAGIEbDZ4uVUYmhDki"
+            className=" text-white bg-slate-800 hover:bg-slate-500 rounded-lg px-4 py-1 font-semibold transition-all duration-300"
+          >
+            <FontAwesomeIcon icon={faDownload} /> Brochure
           </a>
         </div>
         {/* <div className="absolute right-20 flex items-center border-gray-500 border-3 rounded-3xl p-0.5">
