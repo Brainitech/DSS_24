@@ -1,4 +1,16 @@
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
-    
+.bg {
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(at 100% 50%, #f505d5 -50rem, transparent 50%), radial-gradient(at 0% 50%, #01d4fe -50rem, transparent 50%),
+    radial-gradient(at 99% 0%, hsla(260, 41%, 31%, 0.57) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(260, 41%, 31%, 0.57) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(260, 41%, 31%, 0.57) 0px, transparent 50%), radial-gradient(at 100% 100%, hsla(260, 41%, 31%, 0.57) 0px, transparent 50%);
+}
+.gradient-border {
+  background: linear-gradient(90deg, #f505d5, #01d4fe);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+}

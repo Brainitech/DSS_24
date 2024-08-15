@@ -36,7 +36,7 @@ const Navbar = () => {
         <MenuIcon />
         <div className="content hidden space-x-8 sm:flex">
           <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
-            About
+            Dashboard
           </a>
           <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Events

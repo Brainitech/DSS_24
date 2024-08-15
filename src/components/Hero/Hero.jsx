@@ -1,30 +1,94 @@
-import React from "react"
-import { FaArrowRight } from "react-icons/fa";
-import { MdArrowOutward } from "react-icons/md";
+import React, { useState, useEffect } from "react"
 import "./hero.css"
+import dsslogo from "/dss logo green.png"
 
-function Hero() {
+export function Timer() {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+
+  useEffect(() => {
+    const targetDate = new Date("2024-09-06")
+    const interval = setInterval(() => {
+      const currentDate = new Date()
+      const remainingTime = targetDate - currentDate
+
+      if (remainingTime <= 0) {
+        clearInterval(interval)
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+      } else {
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000)
+
+        setTimeLeft({ days, hours, minutes, seconds })
+      }
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
-    <div id="home" className="bg-gradient-to-b from-black via-purple-950 to-black w-screen pb-8">
-      <div className="lm:px-4 px-10 lm:py-0 py-20 text-center gap-5 lm-text-start flex lm:flex-row flex-col-reverse justify-between lm:gap-28 items-center mb-8 ">
-        <div className="h-full lm:py-20 lm:mx-20 flex flex-col justify-center lm:items-start items-center text-white lm:text-start w-[75%]">
-          <div className="bg-slate-400 rounded-xl flex flex-row p-[2px] gap-3 justify-center items-center mb-6">
-            <button className="bg-slate-500 rounded-xl lm:px-4">latest update</button>
-            <h2>templates-loom,atlassian,notion and yours</h2>
-            <MdArrowOutward className="mr-[6px]"/>
-          </div>
-          <h2 className="lm:text-[66px] text-[54px] lm:p-0 font-semibold mb-2 leading-loading text-white">
-            Data Science Summit'24
-          </h2>
-          <p className="mt-2 mb-8 w-[60%]">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam pariatur excepturi rem molestiae temporibus sint doloribus suscipit. Eaque dignissimos eveniet veritatis consectetur
-            officia. Iure accusantium illum tempore, minima dignissimos quia?
-          </p>
-            <button className=" rounded-[3px] px-6 border border-white font-bold text-white flex flex-row justify-center items-center gap-2">Register Now <FaArrowRight/></button>
+    <div className="flex gap-6 sm:gap-10">
+      <div className="w-[3.1rem] h-[3.1rem] sm:w-[4.2rem] sm:h-[4.2rem] bg-gradient-to-br from-[#f505d5] to-[#01d4fe] rounded-lg flex justify-center items-center p-0">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#442f6f] rounded-lg flex flex-col items-center justify-center text-center text-white font-semibold text-xs sm:text-sm">
+          {timeLeft.days}
+          <br />
+          <div className="text-[11px] sm:text-sm">Days</div>
+        </div>
+      </div>
+      <div className="w-[3.1rem] h-[3.1rem] sm:w-[4.2rem] sm:h-[4.2rem] bg-gradient-to-br from-[#f505d5] to-[#01d4fe] rounded-lg flex justify-center items-center p-0">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#442f6f] rounded-lg flex flex-col items-center justify-center text-center text-white font-semibold text-xs sm:text-sm">
+          {timeLeft.hours}
+          <br />
+          <div className="text-[11px] sm:text-sm">Hours</div>
+        </div>
+      </div>
+      <div className="w-[3.1rem] h-[3.1rem] sm:w-[4.2rem] sm:h-[4.2rem] bg-gradient-to-br from-[#f505d5] to-[#01d4fe] rounded-lg flex justify-center items-center p-0">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#442f6f] rounded-lg flex flex-col items-center justify-center text-center text-white font-semibold text-xs sm:text-sm">
+          {timeLeft.minutes}
+          <br />
+          <div className="text-[11px] sm:text-sm">Minutes</div>
+        </div>
+      </div>
+      <div className="w-[3.1rem] h-[3.1rem] sm:w-[4.2rem] sm:h-[4.2rem] bg-gradient-to-br from-[#f505d5] to-[#01d4fe] rounded-lg flex justify-center items-center p-0">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#442f6f] rounded-lg flex flex-col items-center justify-center text-center text-white font-semibold text-xs sm:text-sm">
+          {timeLeft.seconds}
+          <br />
+          <div className="text-[11px] sm:text-sm">Seconds</div>
         </div>
       </div>
     </div>
+  )
+}
+
+function Hero() {
+  return (
+    <>
+      <div className="bg h-screen flex justify-center items-center">
+        {/* <img src={dsslogo} alt="DSS Logo" className="mr-[10%] hidden xl:block sm:w-auto sm:h-80" /> */}
+        <div className="flex flex-col items-center">
+          <h1 className="mt-14 text-center text-5xl sm:text-7xl font-bold font-montserrat    tracking-[-3px] font-krona bg-clip-text bg-gradient-to-b from-[#f505d5] to-[#01d4fe] text-transparent ">
+            Data Science <br />
+            Summit '24
+          </h1>
+          <p className="mt-6 text-white text-xs sm:text-sm font-montserrat w-[80vw] sm:w-[33.3vw] text-center font-semibold">
+            Welcome to the Data Science Summit 2024, hosted by the Society for Data Science at BIT Mesra. This event is your gateway to exploring the latest trends and innovations in data science.
+            Connect with experts, engage in insightful discussions, and enhance your knowledge in this dynamic field. Let's unlock the power of data together!
+          </p>
+          <h4 className="text-[#01d4fe] font-bold font-montserrat py-8">6th-8th September 2024</h4>
+          <Timer />
+          <button className="mt-10 bg-white w-32 h-8 rounded-lg flex justify-center items-center shadow-[0_0_15px_rgba(255,255,255,0.8)] hover:shadow-[0_0_25px_rgba(255,255,255,1)] hover:cursor-pointer transition-shadow duration-200">
+            <a className="bg-clip-text bg-gradient-to-r from-[#f505d5] to-[#01d4fe] text-transparent font-montserrat font-extrabold">Register Now!</a>
+          </button>
+        </div>
+        {/* <img src={dsslogo} alt="DSS Logo" className="ml-[10%] hidden xl:block sm:w-auto sm:h-80" /> */}
+      </div>
+    </>
   )
 }
 
