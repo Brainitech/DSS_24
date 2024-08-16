@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import "./hero.css"
 import dsslogo from "/dss logo green.png"
+import pdsslogo from "./DSS_Logo.png"
+import tech from "./tech.png"
 
 export function Timer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -69,24 +71,25 @@ export function Timer() {
 function Hero() {
   return (
     <>
-      <div className="bg h-screen flex justify-center items-center">
-        {/* <img src={dsslogo} alt="DSS Logo" className="mr-[10%] hidden xl:block sm:w-auto sm:h-80" /> */}
-        <div className="flex flex-col items-center">
-          <h1 className="mt-14 text-center text-5xl sm:text-7xl font-bold font-montserrat    tracking-[-3px] font-krona bg-clip-text bg-gradient-to-b from-[#f505d5] to-[#01d4fe] text-transparent ">
+      <div className="bg h-full flex flex-col justify-center xl:grid xl:grid-cols-3 items-center">
+        {/* <img src={pdsslogo} alt="DSS Logo" className="absolute left-10 top-50 hidden xl:block sm:w-auto sm:h-80" /> */}
+        <img src={tech} alt="DSS Logo" className="block sm:w-auto sm:h-96" />
+        <div className="m-0 xl:mt-20 flex flex-col items-center">
+          <h1 className="mt-0 xl:mt-14 text-center text-5xl sm:text-7xl font-bold font-montserrat    tracking-[-3px] font-krona bg-clip-text bg-gradient-to-b from-[#f505d5] to-[#01d4fe] text-transparent ">
             Data Science <br />
             Summit '24
           </h1>
-          <p className="mt-6 text-white text-xs sm:text-sm font-montserrat w-[80vw] sm:w-[33.3vw] text-center font-semibold">
+          <p className="mt-6 text-white text-xs sm:text-sm font-montserrat w-[80vw] sm:w-[60vw] md:w-[33.3vw] text-center font-semibold">
             Welcome to the Data Science Summit 2024, hosted by the Society for Data Science at BIT Mesra. This event is your gateway to exploring the latest trends and innovations in data science.
             Connect with experts, engage in insightful discussions, and enhance your knowledge in this dynamic field. Let's unlock the power of data together!
           </p>
           <h4 className="text-[#01d4fe] font-bold font-montserrat py-8">6th-8th September 2024</h4>
           <Timer />
-          <button className="mt-10 bg-white w-32 h-8 rounded-lg flex justify-center items-center shadow-[0_0_15px_rgba(255,255,255,0.8)] hover:shadow-[0_0_25px_rgba(255,255,255,1)] hover:cursor-pointer transition-shadow duration-200">
-            <a className="bg-clip-text bg-gradient-to-r from-[#f505d5] to-[#01d4fe] text-transparent font-montserrat font-extrabold">Register Now!</a>
+          <button className="my-10 bg-gradient-to-tr from-[#533377] to-[#8c35dd] w-32 h-8 rounded-lg flex justify-center items-center shadow-[0_0_15px_rgba(255,255,255,0.8)] hover:shadow-[0_0_25px_rgba(255,255,255,1)] hover:cursor-pointer transition-shadow duration-200">
+            <a className="text-white text-transparent font-montserrat font-extrabold">Register Now!</a>
           </button>
         </div>
-        {/* <img src={dsslogo} alt="DSS Logo" className="ml-[10%] hidden xl:block sm:w-auto sm:h-80" /> */}
+        <img src={pdsslogo} alt="DSS Logo" className="mx-14 hidden xl:block sm:w-auto sm:h-80" />
       </div>
     </>
   )
