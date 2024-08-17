@@ -8,6 +8,7 @@
     height: 100vh;
     top: 56px;
     transition: all 0.5s ease-in-out;
+    backdrop-filter: blur(16px);
   }
   .MenuIcon.open + .content {
     right: 0;

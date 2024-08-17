@@ -1,13 +1,14 @@
 import React from "react"
 import { MdEmail } from "react-icons/md"
+import Hero from "../Hero/Hero"
 
 function Sponsors() {
   return (
-    <div id="sponsors" className="p-4 flex flex-col justify-center items-center text-center bg-gradient-to-b from-black via-purple-950 to-black pb-8 overflow-x-hidden">
-      <h1 className="w-max pt-16 text-center text-4xl sm:text-5xl tracking-[-3px] font-bold font-montserrat bg-clip-text bg-gradient-to-r from-[#0055ff] to-[#04f8e8] text-transparent">
+    <div id="sponsors" className="p-4 flex flex-col justify-center items-center text-center bg pb-8 overflow-x-hidden">
+      <h1 className="w-max pt-16 text-center text-4xl sm:text-5xl tracking-[-3px] font-bold font-montserrat bg-clip-text bg-gradient-to-l from-[#f505d5] to-[#01d4fe] text-transparent">
         Meet Our Sponsors
       </h1>
-      <div className="h-1 w-[18rem] sm:w-[26rem] mt-2 rounded-sm bg-gradient-to-r from-[#0055ff] to-[#04f8e8]"></div>
+      <div className="h-1 w-[18rem] sm:w-[26rem] mt-2 rounded-sm bg-gradient-to-l from-[#f505d5] to-[#01d4fe]"></div>
       <div className="relative flex overflow-x-hidden text-white my-32 w-[80vw] justify-left align-center">
         <div className="animate-marquee whitespace-nowrap flex flex-row gap-20">
           {[...Array(6)].map((_, i) => (

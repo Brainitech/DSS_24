@@ -71,11 +71,11 @@ export function Timer() {
 function Hero() {
   return (
     <>
-      <div className="bg h-full flex flex-col justify-center xl:grid xl:grid-cols-3 items-center">
+      <div className="bg h-full xl:h-screen flex flex-col justify-center xl:grid xl:grid-cols-3 items-center">
         {/* <img src={pdsslogo} alt="DSS Logo" className="absolute left-10 top-50 hidden xl:block sm:w-auto sm:h-80" /> */}
         <img src={tech} alt="DSS Logo" className="block sm:w-auto sm:h-96" />
         <div className="m-0 xl:mt-20 flex flex-col items-center">
-          <h1 className="mt-0 xl:mt-14 text-center text-5xl sm:text-7xl font-bold font-montserrat    tracking-[-3px] font-krona bg-clip-text bg-gradient-to-b from-[#f505d5] to-[#01d4fe] text-transparent ">
+          <h1 className="mt-0 xl:mt-14 text-center text-5xl sm:text-7xl font-bold tracking-[-3px] font-krona bg-clip-text bg-gradient-to-b from-[#f505d5] to-[#01d4fe] text-transparent ">
             Data Science <br />
             Summit '24
           </h1>
