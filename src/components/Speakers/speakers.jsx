@@ -73,9 +73,8 @@ export default function Speakers() {
         <div className="h-1 w-[18rem] sm:w-[25rem] mt-2 rounded-sm bg-gradient-to-l from-[#f505d5] to-[#01d4fe]"></div>
       </div>
       <div className="text-white text-justify md:text-center w-[75vw] md:text-xl text-semibold font-montserrat pb-10">
-        This will be a Fireside Chat featuring one of the most distinguished and renowned figures in the realm of technology and data science. Our guest is a household name among tech enthusiasts and
-        is celebrated for their exceptional contributions to the field. During this engaging session, attendees will have the extraordinary opportunity to have their inquiries addressed directly by
-        our esteemed speaker. Expected Attendance - 500+ people
+        Our event features a distinguished lineup of thought leaders and experts who are shaping the future of their industries. These speakers bring a wealth of knowledge, experience, and insight,
+        offering attendees the opportunity to learn from and engage with some of the most influential voices in the field. We are honored to have them share their expertise and inspire our audience.
       </div>
       <div className="alumini1">
         <div className="flex flex-col xl:flex-row gap-[10vw] items-center justify-center">
