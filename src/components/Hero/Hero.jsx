@@ -71,7 +71,7 @@ export function Timer() {
 function Hero() {
   return (
     <>
-      <div className="bg h-full xl:h-screen flex flex-col justify-center xl:grid xl:grid-cols-3 items-center">
+      <div id="hero" className="bg h-full xl:h-screen flex flex-col justify-center xl:grid xl:grid-cols-3 items-center">
         {/* <img src={pdsslogo} alt="DSS Logo" className="absolute left-10 top-50 hidden xl:block sm:w-auto sm:h-80" /> */}
         <img src={tech} alt="DSS Logo" className="block sm:w-auto sm:h-96" />
         <div className="m-0 xl:mt-20 flex flex-col items-center">

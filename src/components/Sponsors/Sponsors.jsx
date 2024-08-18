@@ -13,7 +13,7 @@ function Sponsors() {
         We are proud to partner with industry-leading organizations that share our vision and commitment to innovation and excellence. Their generous support helps us bring this event to life,
         fostering a community of learning, networking, and growth. We extend our heartfelt thanks to our sponsors for their invaluable contributions and dedication to advancing the field.
       </div>
-      <div className="relative flex overflow-x-hidden text-white my-20 sm:my-32 w-[80vw] justify-left align-center">
+      <div className="relative flex overflow-x-hidden text-white my-20 sm:my-32 w-[80vw] justify-left align-center rounded-3xl">
         <div className="animate-marquee whitespace-nowrap flex flex-row gap-20">
           {[...Array(6)].map((_, i) => (
             <div key={i} className="flex flex-col justify-center items-center text-center">

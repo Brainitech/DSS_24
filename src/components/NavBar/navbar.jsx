@@ -31,13 +31,13 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-center items-center">
         <div className="flex items-center absolute left-10">
           <img src="/sds.png" className="w-10" alt="SDS Logo" />
-          <a href="#home" className="text-white text-lg font-bold text-center">
+          <a href="https://sdsbitm24.netlify.app" className="text-white text-lg font-bold text-center">
             SDS
           </a>
         </div>
         <MenuIcon />
         <div className="content hidden space-x-8 sm:flex">
-          <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="#hero" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Dashboard
           </a>
           <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">

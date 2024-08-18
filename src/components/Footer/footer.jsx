@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
         <br />
         <div className="first-panel mx-auto">
-          <a href="#home">Back To Top</a>
+          <a href="#hero">Back To Top</a>
         </div>
         <div id="copyright" className="copyright-area">
           <div className="copyright-text">
