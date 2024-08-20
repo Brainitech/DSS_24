@@ -13,9 +13,9 @@ function Sponsors() {
         We are proud to partner with industry-leading organizations that share our vision and commitment to innovation and excellence. Their generous support helps us bring this event to life,
         fostering a community of learning, networking, and growth. We extend our heartfelt thanks to our sponsors for their invaluable contributions and dedication to advancing the field.
       </div>
-      <div className="relative flex overflow-x-hidden text-white my-20 sm:my-32 w-[80vw] justify-left align-center rounded-3xl">
+      {/* <div className="relative flex overflow-x-hidden text-white sm:my-32 w-screen justify-left align-center rounded-3xl">
         <div className="animate-marquee whitespace-nowrap flex flex-row gap-20">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(10)].map((_, i) => (
             <div key={i} className="flex flex-col justify-center items-center text-center">
               <h1>Sponsor - {i + 1}</h1>
               <MdEmail className="w-20 h-20" />
@@ -23,13 +23,20 @@ function Sponsors() {
           ))}
         </div>
         <div className="animate-marquee2 whitespace-nowrap flex flex-row gap-20 ml-20">
-          {[...Array(6)].map((_, i) => (
+          {[...Array(10)].map((_, i) => (
             <div key={i} className="flex flex-col justify-right items-center text-center">
               <h1>Sponsor - {i + 1}</h1>
               <MdEmail className="w-20 h-20" />
-            </div>
-          ))}
+            </div>          ))}
         </div>
+      </div> */}
+      <div className="animate-marquee whitespace-nowrap w-screen flex justify-left items-center mt-10 gap-2">
+        {[...Array(5)].map((_, i) => (
+        <div className="h-48 w-80 bg-cyan-500 rounded-2xl opacity-60 perspective-100px"></div>))}
+      <div className="animate-marquee2 whitespace-nowrap w-screen flex justify-right items-center mt-10 gap-2">
+        {[...Array(5)].map((_, i) => (
+        <div className="h-48 w-80 bg-cyan-500 rounded-2xl opacity-60 perspective-100px"></div>))}</div>
+        
       </div>
     </div>
   )
