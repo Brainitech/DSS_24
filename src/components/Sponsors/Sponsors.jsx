@@ -18,8 +18,8 @@ function Sponsors() {
     const createcarrossel = () => {
       const carrosselProps = onResize()
       const length = carrosselItems.length
+      const gap = getGapValue() // Calculate gap based on screen size
       const degrees = 360 / length
-      const gap = 200
       const tz = distanceZ(carrosselProps.w, length, gap)
 
       const fov = calculateFov(carrosselProps)
@@ -33,6 +33,17 @@ function Sponsors() {
         item.style.setProperty("--rotatey", degreesByItem)
         item.style.setProperty("--tz", tz + "px")
       })
+    }
+
+    const getGapValue = () => {
+      const screenWidth = window.innerWidth
+      if (screenWidth < 640) {
+        return 200 / 10 // Small screen (sm)
+      } else if (screenWidth >= 640 && screenWidth < 1024) {
+        return 200 / 2 // Medium and larger screens (md)
+      } else {
+        return 200 // Large screen (lg)
+      }
     }
 
     const lerp = (a, b, n) => n * (a - b) + b
