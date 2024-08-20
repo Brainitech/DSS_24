@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClasses}>
-      <div className="container mx-auto flex justify-center items-center">
+      <div className="mx-auto flex justify-center items-center">
         <div className="flex items-center absolute left-10">
           <img src="/sds.png" className="w-10" alt="SDS Logo" />
           <a href="https://sdsbitm24.netlify.app" className="text-white text-lg font-bold text-center">
