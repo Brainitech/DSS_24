@@ -134,7 +134,7 @@ function Sponsors() {
 
   return (
     <div id="sponsors" className="h-screen flex flex-col justify-center items-center text-center bg overflow-x-hidden">
-      <div className="w-max pt-16 text-center text-4xl sm:text-5xl tracking-[-3px] font-bold font-montserrat bg-clip-text bg-gradient-to-l from-[#f505d5] to-[#01d4fe] text-transparent">
+      <div className="w-max mt-8 pt-16 text-center text-4xl sm:text-5xl tracking-[-3px] font-bold font-montserrat bg-clip-text bg-gradient-to-l from-[#f505d5] to-[#01d4fe] text-transparent">
         Meet Our Sponsors
       </div>
       <div className="h-1 w-[18rem] sm:w-[26rem] mt-2 rounded-sm bg-gradient-to-l from-[#f505d5] to-[#01d4fe] mb-10 md:mb-18"></div>

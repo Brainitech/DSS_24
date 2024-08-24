@@ -37,19 +37,19 @@ const Navbar = () => {
         </div>
         <MenuIcon />
         <div className="content hidden space-x-8 sm:flex">
-          <a href="#hero" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="/#hero" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Dashboard
           </a>
-          <a href="#" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="/events" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Events
           </a>
-          <a href="#sponsors" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="/#sponsors" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Sponsors
           </a>
-          <a href="#SPEAKERS" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="/#SPEAKERS" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Speakers
           </a>
-          <a href="#footer" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
+          <a href="/#footer" className=" text-white hover:backdrop-blur-md rounded-2xl px-4 py-1 font-semibold transition-all duration-300">
             Contact Us
           </a>
           <a
