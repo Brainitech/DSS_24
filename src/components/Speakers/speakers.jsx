@@ -62,7 +62,7 @@ Speakercard.propTypes = {
   text: PropTypes.string.isRequired,
   isAlternate: PropTypes.bool,
 }
-console.log(speak1, speak2, speak3)
+// console.log(speak1, speak2, speak3)
 export default function Speakers() {
   return (
     <div className="h-full xl:h-screen w-screen pb-8 bg flex flex-col items-center">
