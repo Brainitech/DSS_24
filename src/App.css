@@ -40,7 +40,7 @@ canvas {
   width: 50vw !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .cursor {
     display: none;
   }
