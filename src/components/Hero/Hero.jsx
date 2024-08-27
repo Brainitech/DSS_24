@@ -92,7 +92,7 @@ function Hero() {
   return (
     <>
       <div id="hero" className="bg h-full xl:h-screen flex flex-col justify-center xl:grid xl:grid-cols-3 items-center">
-        <img src={tech} alt="DSS Logo" className="block sm:w-auto sm:h-96" />
+        <img src={tech} alt="DSS Logo" className="block sm:w-auto sm:h-96 md:ml-16" />
         <div className="m-0 xl:mt-20 flex flex-col items-center">
           <h1 className="mt-0 xl:mt-14 text-center text-5xl sm:text-7xl font-bold tracking-[-3px] font-krona bg-clip-text bg-gradient-to-b from-[#f505d5] to-[#01d4fe] text-transparent ">
             Data Science <br />
@@ -110,7 +110,7 @@ function Hero() {
             </button>
           )}
         </div>
-        <img src={pdsslogo} alt="DSS Logo" className="mx-14 hidden xl:block sm:w-auto sm:h-80" />
+        <img src={pdsslogo} alt="DSS Logo" className="ml-36 hidden xl:block sm:w-auto sm:h-80" />
       </div>
     </>
   )
