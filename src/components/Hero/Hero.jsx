@@ -106,7 +106,9 @@ function Hero() {
           <Timer />
           {eventStatus !== "Event Completed" && (
             <button className="my-10 bg-gradient-to-tr from-[#533377] to-[#8c35dd] w-32 h-8 rounded-lg flex justify-center items-center shadow-[0_0_15px_rgba(255,255,255,0.8)] hover:shadow-[0_0_25px_rgba(255,255,255,1)] hover:cursor-pointer transition-shadow duration-200">
-              <a className="text-white text-transparent font-montserrat font-extrabold">Register Now!</a>
+              <a className="text-white text-transparent font-montserrat font-extrabold" href="/events">
+                Register Now!
+              </a>
             </button>
           )}
         </div>

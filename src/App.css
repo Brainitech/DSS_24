@@ -35,8 +35,8 @@
 }
 
 canvas {
-  margin: 10vh 0;
-  height: 80vh !important;
+  margin: 20vh 0;
+  height: 70vh !important;
   width: 50vw !important;
 }
 
@@ -71,7 +71,7 @@ canvas {
 
 @media (max-width: 432px) {
   canvas {
-    margin: 30vh 0;
+    margin: 20vh 0 6vh 0;
     height: 40vh !important;
     width: 95vw !important;
   }

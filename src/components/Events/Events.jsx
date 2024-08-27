@@ -11,6 +11,7 @@ import { easing } from "maath"
 import Building_test from "/public/Building_test"
 import UI from "./UI"
 import "/src/App.css"
+import Register from "./Register"
 
 import { PlayuseDoors } from "./sevents"
 
@@ -25,35 +26,35 @@ export function DefRig({ controlsActive }) {
 
 export function HRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 2 - state.mouse.y / 5, 1.2], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 2 - state.mouse.y / 5, 1.2], 0.5, delta)
     easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.06], 0.2, delta)
   })
 }
 
 export function QRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 0.2 - state.mouse.y / 5, 1.2], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 0.2 - state.mouse.y / 5, 1.2], 0.5, delta)
     easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.2, delta)
   })
 }
 
 export function SRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -1.8 - state.mouse.y / 5, 1.2], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -1.8 - state.mouse.y / 5, 1.2], 0.5, delta)
     easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.08], 0.2, delta)
   })
 }
 
 export function TRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -3.8 - state.mouse.y / 5, 1.2], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -3.8 - state.mouse.y / 5, 1.2], 0.5, delta)
     easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.2, delta)
   })
 }
 
 export function BRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -5.7 - state.mouse.y / 5, 1.2], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -5.7 - state.mouse.y / 5, 1.2], 0.5, delta)
     easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.2, delta)
   })
 }
@@ -209,8 +210,8 @@ function Events() {
     if (animationIndex === 0 && canvasRef.current) {
       const timer = setTimeout(() => {
         const rect = canvasRef.current.getBoundingClientRect()
-        const randomX = rect.left + Math.random() * rect.width
-        const randomY = rect.top + Math.random() * rect.height
+        const randomX = rect.left
+        const randomY = rect.bottom
 
         // Create and dispatch the "pointerdown" event
         const pointerDownEvent = new MouseEvent("pointerdown", {
@@ -257,7 +258,7 @@ function Events() {
     <>
       <CustomCursor />
       <Navbar />
-      <div className="bg flex justify-center">
+      <div className="bg flex flex-col justify-center items-center">
         <Canvas ref={canvasRef} camera={{ position: [1, 1.5, 30], fov: 65 }} className="bgc">
           <group position={[0, -10, 0]} rotation={[0, 3.2, 0]}>
             <Suspense fallback={<Preloader />}>
@@ -278,8 +279,8 @@ function Events() {
               <OrbitControls
                 enablePan={false}
                 enableZoom={false}
-                minAzimuthAngle={-Math.PI / 3}
-                maxAzimuthAngle={Math.PI / 3}
+                // minAzimuthAngle={-Math.PI / 3}
+                // maxAzimuthAngle={Math.PI / 3}
                 minPolarAngle={Math.PI / 6}
                 maxPolarAngle={Math.PI - Math.PI / 2}
                 onStart={() => (controlsActive.current = true)}
@@ -295,6 +296,7 @@ function Events() {
           </group>
           <ClickHandler setAnimationIndex={setAnimationIndex} />
         </Canvas>
+        <Register />
       </div>
       {animationIndex !== null && animationIndex !== 0 && <UI setAnimationIndex={setAnimationIndex} />}
       <Footer />
