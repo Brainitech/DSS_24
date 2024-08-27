@@ -82,10 +82,10 @@ const UI = ({ setAnimationIndex }) => {
           Speaker Session
         </button>
         <button style={animationIndex === 2 ? butaStyle : butStyle} onClick={() => handleButtonClick(2)}>
-          Treasure Hunt
+          Treasure Trails
         </button>
         <button style={animationIndex === 1 ? butaStyle : butStyle} onClick={() => handleButtonClick(1)}>
-          Business Analytics
+          Coders Cup
         </button>
       </div>
     </>
