@@ -83,7 +83,7 @@ export function useMediaQuery(query) {
 export function E1() {
   return (
     <>
-      <mesh name="E1" position={[-4, 11.5, 0.5]}>
+      <mesh name="E1" position={[3, 11.5, 0.5]}>
         <boxGeometry args={[3, 1, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
@@ -93,7 +93,7 @@ export function E1() {
 export function E2() {
   return (
     <>
-      <mesh name="E2" position={[-4, 9.5, 0.5]}>
+      <mesh name="E2" position={[3, 9.5, 0.5]}>
         <boxGeometry args={[3, 1, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
@@ -130,16 +130,6 @@ export function E5() {
     </>
   )
 }
-export function E6() {
-  return (
-    <>
-      <mesh name="E6" position={[0, 11.5, -1]}>
-        <boxGeometry args={[3, 1, 0.1]} />
-        <meshStandardMaterial color="orange" />
-      </mesh>
-    </>
-  )
-}
 
 // New ClickHandler Component
 function ClickHandler({ setAnimationIndex }) {
@@ -160,11 +150,10 @@ function ClickHandler({ setAnimationIndex }) {
     raycaster.setFromCamera(mouse, camera)
 
     // Check for intersections with all objects in the scene
-    const intersects = raycaster.intersectObjects(scene.children, true)
+    const intersects = raycaster.intersectObjects(scene.children, true).filter((obj) => obj.object.name.startsWith("E"))
 
     if (intersects.length > 0) {
       console.log("Clicked on:", intersects[0].object.name)
-      // Example: setAnimationIndex(1); // Uncomment to change animation based on the clicked object
       switch (intersects[0].object.name) {
         case "E1":
           handleButtonClick(5)
@@ -181,12 +170,8 @@ function ClickHandler({ setAnimationIndex }) {
         case "E5":
           handleButtonClick(1)
           break
-        case "E6":
-          handleButtonClick(0)
-          break
         default:
           handleButtonClick(0)
-          DefRig(true)
           break
       }
     }
@@ -219,6 +204,44 @@ function Events() {
       }
     }
   }, [scrsize])
+
+  useEffect(() => {
+    if (animationIndex === 0 && canvasRef.current) {
+      const timer = setTimeout(() => {
+        const rect = canvasRef.current.getBoundingClientRect()
+        const randomX = rect.left + Math.random() * rect.width
+        const randomY = rect.top + Math.random() * rect.height
+
+        // Create and dispatch the "pointerdown" event
+        const pointerDownEvent = new MouseEvent("pointerdown", {
+          clientX: randomX,
+          clientY: randomY,
+          bubbles: true,
+          cancelable: true,
+          view: window,
+        })
+
+        canvasRef.current.dispatchEvent(pointerDownEvent)
+        console.log("Clicked down")
+
+        // Short delay before triggering the "pointerup" event
+        setTimeout(() => {
+          const pointerUpEvent = new MouseEvent("pointerup", {
+            clientX: randomX,
+            clientY: randomY,
+            bubbles: true,
+            cancelable: true,
+            view: window,
+          })
+
+          canvasRef.current.dispatchEvent(pointerUpEvent)
+          console.log("Clicked up")
+        }, 5) // Adjust the delay between "down" and "up" as needed (100 ms in this case)
+      }, 10)
+
+      return () => clearTimeout(timer) // Clean up the timer on component unmount or when animationIndex changes
+    }
+  }, [animationIndex])
 
   console.log(animationIndex)
 
@@ -273,7 +296,7 @@ function Events() {
           <ClickHandler setAnimationIndex={setAnimationIndex} />
         </Canvas>
       </div>
-      {/* <UI setAnimationIndex={setAnimationIndex} /> */}
+      {animationIndex !== null && animationIndex !== 0 && <UI setAnimationIndex={setAnimationIndex} />}
       <Footer />
     </>
   )

@@ -40,6 +40,7 @@ const UI = ({ setAnimationIndex }) => {
     justifyContent: "center",
     borderRadius: "5px",
     backgroundColor: "lightgray",
+    padding: "5px",
   }
   const butaStyle = {
     display: "flex",
@@ -72,7 +73,7 @@ const UI = ({ setAnimationIndex }) => {
         <button style={animationIndex === 0 ? butaStyle : butStyle} onClick={() => handleButtonClick(0)}>
           Close All
         </button>
-        <button style={animationIndex === 5 ? butaStyle : butStyle} onClick={() => handleButtonClick(5)}>
+        {/* <button style={animationIndex === 5 ? butaStyle : butStyle} onClick={() => handleButtonClick(5)}>
           Hackathon
         </button>
         <button style={animationIndex === 4 ? butaStyle : butStyle} onClick={() => handleButtonClick(4)}>
@@ -86,7 +87,7 @@ const UI = ({ setAnimationIndex }) => {
         </button>
         <button style={animationIndex === 1 ? butaStyle : butStyle} onClick={() => handleButtonClick(1)}>
           Coders Cup
-        </button>
+        </button> */}
       </div>
     </>
   )
