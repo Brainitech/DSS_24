@@ -273,7 +273,7 @@ function Events() {
           <ClickHandler setAnimationIndex={setAnimationIndex} />
         </Canvas>
       </div>
-      <UI setAnimationIndex={setAnimationIndex} />
+      {/* <UI setAnimationIndex={setAnimationIndex} /> */}
       <Footer />
     </>
   )
