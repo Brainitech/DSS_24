@@ -210,7 +210,7 @@ function Events() {
   const canvasRef = useRef()
 
   const scrsize = animationIndex === 0 || animationIndex === null ? (isMobile ? true : false) : false
-  const desize = animationIndex === 0 || animationIndex === null ? (notMobile ? false : true) : true
+  const desize = animationIndex === 0 || animationIndex === null ? (notMobile ? true : false) : false
 
   useEffect(() => {
     if (canvasRef.current) {
