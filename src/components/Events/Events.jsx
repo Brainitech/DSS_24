@@ -4,16 +4,25 @@ import Navbar from "../NavBar/navbar"
 import Footer from "../Footer/footer"
 import "../Hero/hero.css"
 import { Raycaster, Vector2 } from "three"
-import { Canvas, useFrame, useThree } from "@react-three/fiber"
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber"
 import { Suspense, useRef, useState, useEffect } from "react"
-import { OrbitControls, Html } from "@react-three/drei"
+import { OrbitControls, Html, RoundedBox } from "@react-three/drei"
 import { easing } from "maath"
 import Building_test from "/public/Building_test"
 import UI from "./UI"
 import "/src/App.css"
 import Register from "./Register"
+import * as THREE from "three"
+// import { RoundedBoxGeometry } from "./threejs/examples/jsm/geometries/RoundedBoxGeometry.js"
 
 import { PlayuseDoors } from "./sevents"
+
+import HnF from "./posters/HacknForge.png"
+import TQ from "./posters/TQ.png"
+import SS from "./posters/SS.png"
+import TH from "./posters/TH.png"
+import CC from "./posters/CC.png"
+import { RoundedBoxGeometry } from "three/examples/jsm/Addons.js"
 
 export function DefRig({ controlsActive }) {
   return useFrame((state, delta) => {
@@ -82,51 +91,56 @@ export function useMediaQuery(query) {
 }
 
 export function E1() {
+  const texture = useLoader(THREE.TextureLoader, HnF)
   return (
     <>
       <mesh name="E1" position={[6, 25, 0.5]}>
         <boxGeometry args={[3, 3, 0.1]} />
-        <meshStandardMaterial color="orange" />
+        <meshStandardMaterial map={texture} />
       </mesh>
     </>
   )
 }
 export function E2() {
+  const texture = useLoader(THREE.TextureLoader, TQ)
   return (
     <>
       <mesh name="E2" position={[6, 20, 0.5]}>
         <boxGeometry args={[3, 3, 0.1]} />
-        <meshStandardMaterial color="orange" />
+        <meshStandardMaterial map={texture} />
       </mesh>
     </>
   )
 }
 export function E3() {
+  const texture = useLoader(THREE.TextureLoader, SS)
   return (
     <>
       <mesh name="E3" position={[6, 15, 0.5]}>
         <boxGeometry args={[3, 3, 0.1]} />
-        <meshStandardMaterial color="orange" />
+        <meshLambertMaterial map={texture} />
       </mesh>
     </>
   )
 }
 export function E4() {
+  const texture = useLoader(THREE.TextureLoader, TH)
   return (
     <>
       <mesh name="E4" position={[6, 10, 0.5]}>
         <boxGeometry args={[3, 3, 0.1]} />
-        <meshStandardMaterial color="orange" />
+        <meshStandardMaterial map={texture} />
       </mesh>
     </>
   )
 }
 export function E5() {
+  const texture = useLoader(THREE.TextureLoader, CC)
   return (
     <>
       <mesh name="E5" position={[6, 5, 0.5]}>
         <boxGeometry args={[3, 3, 0.1]} />
-        <meshStandardMaterial color="orange" />
+        <meshStandardMaterial map={texture} />
       </mesh>
     </>
   )
@@ -151,7 +165,7 @@ function ClickHandler({ setAnimationIndex }) {
     raycaster.setFromCamera(mouse, camera)
 
     // Check for intersections with all objects in the scene
-    const intersects = raycaster.intersectObjects(scene.children, true).filter((obj) => obj.object.name.startsWith("E"))
+    const intersects = raycaster.intersectObjects(scene.children, true) //.filter((obj) => obj.object.name.startsWith("E"))
 
     if (intersects.length > 0) {
       console.log("Clicked on:", intersects[0].object.name)
@@ -223,7 +237,6 @@ function Events() {
         })
 
         canvasRef.current.dispatchEvent(pointerDownEvent)
-        console.log("Clicked down")
 
         // Short delay before triggering the "pointerup" event
         setTimeout(() => {
@@ -236,8 +249,7 @@ function Events() {
           })
 
           canvasRef.current.dispatchEvent(pointerUpEvent)
-          console.log("Clicked up")
-        }, 5) // Adjust the delay between "down" and "up" as needed (100 ms in this case)
+        }, 5)
       }, 10)
 
       return () => clearTimeout(timer) // Clean up the timer on component unmount or when animationIndex changes
@@ -269,7 +281,7 @@ function Events() {
                   <E3 />
                   <E4 />
                   <E5 />
-                  <ambientLight />
+                  <ambientLight intensity={1.5} />
                 </>
               )}
               {/* <E6 /> */}
@@ -297,8 +309,8 @@ function Events() {
           <ClickHandler setAnimationIndex={setAnimationIndex} />
         </Canvas>
         <Register />
+        {animationIndex !== null && animationIndex !== 0 && <UI setAnimationIndex={setAnimationIndex} />}
       </div>
-      {animationIndex !== null && animationIndex !== 0 && <UI setAnimationIndex={setAnimationIndex} />}
       <Footer />
     </>
   )

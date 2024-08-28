@@ -32,7 +32,7 @@ const UI = ({ setAnimationIndex }) => {
 
   return (
     <>
-      <div className="absolute top-28 left-[30%] flex flex-col justify-center">
+      <div className="absolute top-28 flex flex-col justify-center">
         <button className="text-white font-bold" style={animationIndex === 0 ? butaStyle : butStyle} onClick={() => handleButtonClick(0)}>
           View Other Events
         </button>
