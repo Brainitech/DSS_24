@@ -35,36 +35,36 @@ export function DefRig({ controlsActive }) {
 
 export function HRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 2 - state.mouse.y / 5, 1.2], 0.5, delta)
-    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.06], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 2 - state.mouse.y / 5, 1.2], 0.4, delta)
+    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.06], 0.4, delta)
   })
 }
 
 export function QRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 0.2 - state.mouse.y / 5, 1.2], 0.5, delta)
-    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, 0.2 - state.mouse.y / 5, 1.2], 0.4, delta)
+    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.4, delta)
   })
 }
 
 export function SRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -1.8 - state.mouse.y / 5, 1.2], 0.5, delta)
-    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.08], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -1.8 - state.mouse.y / 5, 1.2], 0.4, delta)
+    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.08], 0.4, delta)
   })
 }
 
 export function TRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -3.8 - state.mouse.y / 5, 1.2], 0.5, delta)
-    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -3.8 - state.mouse.y / 5, 1.2], 0.4, delta)
+    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.4, delta)
   })
 }
 
 export function BRig() {
   return useFrame((state, delta) => {
-    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -5.7 - state.mouse.y / 5, 1.2], 0.5, delta)
-    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.2, delta)
+    easing.damp3(state.camera.position, [1.5 - state.mouse.x / 5, -5.7 - state.mouse.y / 5, 1.2], 0.4, delta)
+    easing.damp3(state.camera.rotation, [-0.2, 0.2, 0.05], 0.4, delta)
   })
 }
 
@@ -95,7 +95,7 @@ export function E1() {
   return (
     <>
       <mesh name="E1" position={[6, 25, 0.5]}>
-        <boxGeometry args={[3, 3, 0.1]} />
+        <boxGeometry args={[4, 4, 0.1]} />
         <meshStandardMaterial map={texture} />
       </mesh>
     </>
@@ -106,7 +106,7 @@ export function E2() {
   return (
     <>
       <mesh name="E2" position={[6, 20, 0.5]}>
-        <boxGeometry args={[3, 3, 0.1]} />
+        <boxGeometry args={[4, 4, 0.1]} />
         <meshStandardMaterial map={texture} />
       </mesh>
     </>
@@ -117,7 +117,7 @@ export function E3() {
   return (
     <>
       <mesh name="E3" position={[6, 15, 0.5]}>
-        <boxGeometry args={[3, 3, 0.1]} />
+        <boxGeometry args={[4, 4, 0.1]} />
         <meshLambertMaterial map={texture} />
       </mesh>
     </>
@@ -128,7 +128,7 @@ export function E4() {
   return (
     <>
       <mesh name="E4" position={[6, 10, 0.5]}>
-        <boxGeometry args={[3, 3, 0.1]} />
+        <boxGeometry args={[4, 4, 0.1]} />
         <meshStandardMaterial map={texture} />
       </mesh>
     </>
@@ -139,7 +139,7 @@ export function E5() {
   return (
     <>
       <mesh name="E5" position={[6, 5, 0.5]}>
-        <boxGeometry args={[3, 3, 0.1]} />
+        <boxGeometry args={[4, 4, 0.1]} />
         <meshStandardMaterial map={texture} />
       </mesh>
     </>
@@ -165,7 +165,7 @@ function ClickHandler({ setAnimationIndex }) {
     raycaster.setFromCamera(mouse, camera)
 
     // Check for intersections with all objects in the scene
-    const intersects = raycaster.intersectObjects(scene.children, true).filter((obj) => obj.object.name.startsWith("E"))
+    const intersects = raycaster.intersectObjects(scene.children, true) //.filter((obj) => obj.object.name.startsWith("E"))
 
     if (intersects.length > 0) {
       console.log("Clicked on:", intersects[0].object.name)
@@ -206,9 +206,11 @@ function Events() {
   const [animationIndex, setAnimationIndex] = useState(null)
   const controlsActive = useRef(false)
   const isMobile = useMediaQuery("(max-width: 1024px)")
+  const notMobile = useMediaQuery("(min-width: 1024px)")
   const canvasRef = useRef()
 
   const scrsize = animationIndex === 0 || animationIndex === null ? (isMobile ? true : false) : false
+  const desize = animationIndex === 0 || animationIndex === null ? (notMobile ? false : true) : true
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -221,11 +223,21 @@ function Events() {
   }, [scrsize])
 
   useEffect(() => {
+    if (canvasRef.current) {
+      if (desize && !scrsize) {
+        canvasRef.current.classList.add("desktop")
+      } else {
+        canvasRef.current.classList.remove("desktop")
+      }
+    }
+  }, [desize, scrsize])
+
+  useEffect(() => {
     if (animationIndex === 0 && canvasRef.current) {
       const timer = setTimeout(() => {
         const rect = canvasRef.current.getBoundingClientRect()
-        const randomX = rect.left
-        const randomY = rect.bottom
+        const randomX = rect.right
+        const randomY = rect.top
 
         // Create and dispatch the "pointerdown" event
         const pointerDownEvent = new MouseEvent("pointerdown", {

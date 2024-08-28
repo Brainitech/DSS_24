@@ -1,5 +1,5 @@
 :root {
-  /* cursor: none; */
+  cursor: none;
   scroll-behavior: smooth;
 }
 .cursor {
@@ -35,9 +35,13 @@
 }
 
 canvas {
-  margin: 20vh 0;
-  height: 80vh !important;
+  margin: 5vh 0;
+  height: 90vh !important;
+  width: max-content !important;
+}
+.desktop {
   width: 50vw !important;
+  margin: 20vh 0 5vh 0;
 }
 
 @media (max-width: 640px) {
@@ -47,7 +51,7 @@ canvas {
 }
 @media (max-width: 1024px) {
   canvas {
-    margin: 30vh 0;
+    margin: 20vh 0 10vh 0;
     height: 40vh !important;
     width: 90vw !important;
   }

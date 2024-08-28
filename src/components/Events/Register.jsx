@@ -13,8 +13,8 @@ export default function Register() {
     return (
       <div className="flex flex-col justify-center items-center mb-16">
         <h1 className="absolute top-20 text-white text-3xl font-extrabold font-montserrat">Hack & Forge</h1>
-        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16" style={{ backgroundImage: `url(${HnF})` }}></div>
-        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4">Register Now!</button>
+        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16 lg:absolute lg:left-10 lg:top-1/3 lg:w-[400px] lg:h-[400px]" style={{ backgroundImage: `url(${HnF})` }}></div>
+        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4 lg:absolute lg:left-[7.5rem] lg:bottom-[20%]">Register Now!</button>
       </div>
     )
   }
@@ -22,8 +22,8 @@ export default function Register() {
     return (
       <div className="flex flex-col justify-center items-center mb-16">
         <h1 className="absolute top-20 text-white text-3xl font-extrabold font-montserrat">Tech Quiz</h1>
-        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16" style={{ backgroundImage: `url(${TQ})` }}></div>
-        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4">Register Now!</button>
+        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16 lg:absolute lg:left-10 lg:top-1/3 lg:w-[400px] lg:h-[400px]" style={{ backgroundImage: `url(${TQ})` }}></div>
+        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4 lg:absolute lg:left-[7.5rem] lg:bottom-[20%]">Register Now!</button>
       </div>
     )
   }
@@ -31,8 +31,8 @@ export default function Register() {
     return (
       <div className="flex flex-col justify-center items-center mb-16">
         <h1 className="absolute top-20 text-white text-3xl font-extrabold font-montserrat">Speaker's Session</h1>
-        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16 bg-gray-700" style={{ backgroundImage: `url(${SS})` }}></div>
-        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4">Register Now!</button>
+        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16 bg-gray-700 lg:absolute lg:left-10 lg:top-1/3 lg:w-[400px] lg:h-[400px]" style={{ backgroundImage: `url(${SS})` }}></div>
+        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4 lg:absolute lg:left-[7.5rem] lg:bottom-[20%]">Register Now!</button>
       </div>
     )
   }
@@ -40,8 +40,8 @@ export default function Register() {
     return (
       <div className="flex flex-col justify-center items-center mb-16">
         <h1 className="absolute top-20 text-white text-3xl font-extrabold font-montserrat">Tech Treasure Trail</h1>
-        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16" style={{ backgroundImage: `url(${TH})` }}></div>
-        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4">Register Now!</button>
+        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16 lg:absolute lg:left-10 lg:top-1/3 lg:w-[400px] lg:h-[400px]" style={{ backgroundImage: `url(${TH})` }}></div>
+        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4 lg:absolute lg:left-[7.5rem] lg:bottom-[20%]">Register Now!</button>
       </div>
     )
   }
@@ -49,8 +49,8 @@ export default function Register() {
     return (
       <div className="flex flex-col justify-center items-center mb-16">
         <h1 className="absolute top-20 text-white text-3xl font-extrabold font-montserrat">Coder's Cup</h1>
-        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16" style={{ backgroundImage: `url(${CC})` }}></div>
-        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4">Register Now!</button>
+        <div className="w-[300px] h-[300px] rounded-2xl bg-contain mb-16 lg:absolute lg:left-10 lg:top-1/3 lg:w-[400px] lg:h-[400px]" style={{ backgroundImage: `url(${CC})` }}></div>
+        <button className="w-max text-white text-xl font-bold bg-purple-800 rounded-2xl px-4 lg:absolute lg:left-[7.5rem] lg:bottom-[20%]">Register Now!</button>
       </div>
     )
   }
