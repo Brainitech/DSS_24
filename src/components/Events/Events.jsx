@@ -84,8 +84,8 @@ export function useMediaQuery(query) {
 export function E1() {
   return (
     <>
-      <mesh name="E1" position={[5, 11.5, 0.5]}>
-        <boxGeometry args={[3, 1, 0.1]} />
+      <mesh name="E1" position={[6, 25, 0.5]}>
+        <boxGeometry args={[3, 3, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
     </>
@@ -94,8 +94,8 @@ export function E1() {
 export function E2() {
   return (
     <>
-      <mesh name="E2" position={[5, 9.5, 0.5]}>
-        <boxGeometry args={[3, 1, 0.1]} />
+      <mesh name="E2" position={[6, 20, 0.5]}>
+        <boxGeometry args={[3, 3, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
     </>
@@ -104,8 +104,8 @@ export function E2() {
 export function E3() {
   return (
     <>
-      <mesh name="E3" position={[5, 7.8, 0.5]}>
-        <boxGeometry args={[3, 1, 0.1]} />
+      <mesh name="E3" position={[6, 15, 0.5]}>
+        <boxGeometry args={[3, 3, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
     </>
@@ -114,8 +114,8 @@ export function E3() {
 export function E4() {
   return (
     <>
-      <mesh name="E4" position={[5, 5.8, 0.5]}>
-        <boxGeometry args={[3, 1, 0.1]} />
+      <mesh name="E4" position={[6, 10, 0.5]}>
+        <boxGeometry args={[3, 3, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
     </>
@@ -124,8 +124,8 @@ export function E4() {
 export function E5() {
   return (
     <>
-      <mesh name="E5" position={[5, 3.8, 0.5]}>
-        <boxGeometry args={[3, 1, 0.1]} />
+      <mesh name="E5" position={[6, 5, 0.5]}>
+        <boxGeometry args={[3, 3, 0.1]} />
         <meshStandardMaterial color="orange" />
       </mesh>
     </>
