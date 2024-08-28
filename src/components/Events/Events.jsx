@@ -165,7 +165,7 @@ function ClickHandler({ setAnimationIndex }) {
     raycaster.setFromCamera(mouse, camera)
 
     // Check for intersections with all objects in the scene
-    const intersects = raycaster.intersectObjects(scene.children, true) //.filter((obj) => obj.object.name.startsWith("E"))
+    const intersects = raycaster.intersectObjects(scene.children, true).filter((obj) => obj.object.name.startsWith("E"))
 
     if (intersects.length > 0) {
       console.log("Clicked on:", intersects[0].object.name)
