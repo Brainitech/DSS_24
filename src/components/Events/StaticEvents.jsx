@@ -9,6 +9,7 @@ import TQ from "./posters/TQ.png"
 import SS from "./posters/SS.png"
 import TH from "./posters/TH.png"
 import CC from "./posters/CC.png"
+import bg from "./posters/bg.jpg"
 
 const StaticEvents = () => {
   return (
@@ -18,7 +19,10 @@ const StaticEvents = () => {
       <div className="bg flex flex-col items-center justify-center w-screen">
         <h1 className="text-6xl font-bold text-white text-center mt-28">Events</h1>
         <div className="mb-16 sm:my-16 flex gap-20 flex-wrap flex-col sm:flex-row mxl:max-w-[1140px] sm:max-w-[650px] max-w-[400px] min-h-[1770px] mxl:min-h-max justify-center items-center">
-          <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col sm:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow child">
+          <div
+            className=" bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col sm:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow child"
+            style={{ backgroundImage: `url(${bg})` }}
+          >
             <img src={HnF} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
             <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Hack & Forge</h1>
@@ -34,7 +38,10 @@ const StaticEvents = () => {
               </button>
             </div>
           </div>
-          <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow">
+          <div
+            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
+            style={{ backgroundImage: `url(${bg})` }}
+          >
             <img src={TQ} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
             <div className="flex flex-col  text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Tech Quiz</h1>
@@ -50,7 +57,10 @@ const StaticEvents = () => {
               </button>
             </div>
           </div>
-          <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow">
+          <div
+            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
+            style={{ backgroundImage: `url(${bg})` }}
+          >
             <img src={TH} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
             <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Treasure Trail</h1>
@@ -66,7 +76,10 @@ const StaticEvents = () => {
               </button>
             </div>
           </div>
-          <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow">
+          <div
+            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
+            style={{ backgroundImage: `url(${bg})` }}
+          >
             <img src={CC} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
             <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Coder's Cup</h1>
