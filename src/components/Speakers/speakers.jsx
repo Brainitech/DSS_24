@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import speak1 from "/src/assets/me.png"
+import speak1 from "/src/assets/me.jpg"
 import speak2 from "/src/assets/me2.jpeg"
 import speak3 from "/src/assets/me3.png"
 import "../Hero/hero.css"
@@ -80,14 +80,14 @@ export default function Speakers() {
         <div className="flex flex-col xl:flex-row gap-[10vw] items-center justify-center">
           <Speakercard
             pic={speak1}
-            name="Rishi Agarwal"
-            text="Shikhar Goel is the CTO of GeeksforGeeks, leading the technical team and developing innovative products like GeeksforGeeks Courses, IDE, and Practice. A coder, competitive programmer, and mentor, he graduated from JIIT Noida in 2015 and joined GeeksforGeeks in 2016. He was recognized as a top young CTO in India."
+            name="Vishwa Mohan"
+            text="Vishwa Mohan, the founder of AIMERZ.ai, is transforming the Indian job market by providing job opportunities and upskilling resources. With over 14 years of experience with top companies like PwC and LinkedIn, he has educated over 1 million students, aiming to impact 300 million through his innovative platform."
             isAlternate={false}
           />
           <Speakercard
             pic={speak2}
-            name="Saahit Kamu"
-            text="Shikhar Goel is the CTO of GeeksforGeeks, leading the technical team and developing innovative products like GeeksforGeeks Courses, IDE, and Practice. A coder, competitive programmer, and mentor, he graduated from JIIT Noida in 2015 and joined GeeksforGeeks in 2016. He was recognized as a top young CTO in India."
+            name="Nikhil Saini"
+            text="Nikhil Saini, CEO and Founder of Iris Aerial Innovations, leads a top GIS startup specializing in drone-based solutions for surveying, mapping, and monitoring. With expertise in LiDAR, satellite photogrammetry, and GIS, his company provides precise, innovative solutions. He has lectured at IRICEN, IIT Delhi, and pioneered Drone LiDAR in mining."
             isAlternate={true}
           />
           <Speakercard
