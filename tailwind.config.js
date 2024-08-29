@@ -16,10 +16,11 @@ export default {
       padding: "1rem",
       extend: {},
       screens: {
-        "sm": "640px",
+        "sm": "650px",
         "md": "768px",
         "lg": "1025px",
         "lm": "1060px",
+        "mxl": "1140px",
         "xl": "1280px",
         "2xl": "1536px",
       },
