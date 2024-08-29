@@ -20,7 +20,7 @@ const StaticEvents = () => {
         <div className="mb-16 sm:my-16 flex gap-20 flex-wrap flex-col sm:flex-row mxl:max-w-[1140px] sm:max-w-[650px] max-w-[400px] min-h-[1770px] mxl:min-h-max justify-center items-center">
           <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col sm:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow child">
             <img src={HnF} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
-            <div className="flex flex-col text-xs sm:text-sm items-center justify-between mr-2 min-h-[300px]">
+            <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Hack & Forge</h1>
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Problem statements released an hour before the Hackathon; final solutions presented the next day.</h5>
@@ -36,7 +36,7 @@ const StaticEvents = () => {
           </div>
           <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow">
             <img src={TQ} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
-            <div className="flex flex-col  text-sm sm:text-sm items-center justify-between mr-2 min-h-[300px]">
+            <div className="flex flex-col  text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Tech Quiz</h1>
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Teams tackle 20 tech questions plus an audience question in Prelims. Top 6-7 advance to Finals for head-to-head challenges.</h5>
@@ -52,7 +52,7 @@ const StaticEvents = () => {
           </div>
           <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow">
             <img src={TH} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
-            <div className="flex flex-col text-sm sm:text-sm items-center justify-between mr-2 min-h-[300px]">
+            <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Treasure Trail</h1>
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Teams solve clues in password-protected PDFs to qualify for Finals. In Finals, find QR codes using clues and event volunteers.</h5>
@@ -68,7 +68,7 @@ const StaticEvents = () => {
           </div>
           <div className="bg-slate-700 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow">
             <img src={CC} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
-            <div className="flex flex-col text-sm sm:text-sm items-center justify-between mr-2 min-h-[300px]">
+            <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
               <h1 className="text-white text-2xl font-bold text-center mt-4">Coder's Cup</h1>
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Top 2 from each of 4 groups advance to 8-player eliminatory round, leading to semi-finals and finals.</h5>
