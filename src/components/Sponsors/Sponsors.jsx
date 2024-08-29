@@ -2,6 +2,10 @@ import React, { useEffect } from "react"
 import { MdEmail } from "react-icons/md"
 import "./estilos.css"
 
+import UNstop from "./logos/unstop-logo.svg"
+import AimersAi from "./logos/Aimerz_Logo.png"
+import Noticebard from "./logos/Noticebard-logo.svg"
+
 function Sponsors() {
   useEffect(() => {
     const container = document.querySelector(".container")
@@ -146,29 +150,29 @@ function Sponsors() {
         <div className="container">
           <div className="container-carrossel">
             <div className="carrossel animate-marquee text-white text-sm">
-              <div className="carrossel-item flex flex-col">
-                Sponsor-1
+              <div className="carrossel-item font-bold flex flex-col">
+                unstop
+                <img src={UNstop} className="w-[60%]" />
+              </div>
+              <div className="carrossel-item font-bold flex flex-col">
+                Sponsor-6
                 <MdEmail />
               </div>
-              <div className="carrossel-item flex flex-col">
-                Sponsor-2
-                <MdEmail />
-              </div>
-              <div className="carrossel-item flex flex-col">
-                Sponsor-3
-                <MdEmail />
-              </div>
-              <div className="carrossel-item flex flex-col">
-                Sponsor-4
-                <MdEmail />
-              </div>
-              <div className="carrossel-item flex flex-col">
+              <div className="carrossel-item font-bold flex flex-col">
                 Sponsor-5
                 <MdEmail />
               </div>
-              <div className="carrossel-item flex flex-col">
-                Sponsor-6
+              <div className="carrossel-item font-bold flex flex-col">
+                Sponsor-4
                 <MdEmail />
+              </div>
+              <div className="carrossel-item font-bold flex flex-col">
+                NoticeBard
+                <img src={Noticebard} className="w-[80%]" />
+              </div>
+              <div className="carrossel-item font-bold flex flex-col">
+                AIMERZ
+                <img src={AimersAi} className="w-[80%]" />
               </div>
             </div>
           </div>

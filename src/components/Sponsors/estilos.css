@@ -68,7 +68,7 @@
 .carrossel-item:nth-child(1) {
   --rotatey: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #fbd52daf, #ef3a7baf);
+  background: linear-gradient(-229deg, #0cebebaf, #29ffc6af);
 }
 
 .carrossel-item:nth-child(2) {
@@ -80,7 +80,7 @@
 .carrossel-item:nth-child(3) {
   --rotatey: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #0cebebaf, #29ffc6af);
+  background: linear-gradient(-229deg, #0093e9af, #80d0c7af);
 }
 .carrossel-item:nth-child(4) {
   --rotatey: 0;
@@ -91,13 +91,13 @@
 .carrossel-item:nth-child(5) {
   --rotate: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #0093e9af, #80d0c7af);
+  background: linear-gradient(-229deg, #cf91ffaf, #5782f5af);
 }
 
 .carrossel-item:nth-child(6) {
   --rotatey: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
-  background: linear-gradient(-229deg, #cf91ffaf, #5782f5af);
+  background: linear-gradient(-229deg, #fbd52daf, #ef3a7baf);
 }
 
 @media screen and (min-width: 576px) {
