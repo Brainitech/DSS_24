@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "../NavBar/navbar"
 import Footer from "../Footer/footer"
 import CustomCursor from "../Cursor/CustomCursor"
+import Form from "./Form"
 import "../Hero/hero.css"
 
 import HnF from "./posters/HacknForge.png"
@@ -12,6 +13,12 @@ import CC from "./posters/CC.png"
 import bg from "./posters/bg.jpg"
 
 const StaticEvents = () => {
+  const [buttonId, setButtonId] = React.useState(null)
+  const handleClick = (event) => {
+    const buttonId = event.target.id
+    setButtonId(buttonId)
+    document.querySelector(".reg-form").style.display = "flex"
+  }
   return (
     <>
       <CustomCursor />
@@ -33,13 +40,17 @@ const StaticEvents = () => {
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;R&D Department</h6>
               </div>
-              <button className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105">
+              <button
+                onClick={handleClick}
+                id="HnF"
+                className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105"
+              >
                 Register Now!
               </button>
             </div>
           </div>
           <div
-            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
+            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col sm:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
             style={{ backgroundImage: `url(${bg})` }}
           >
             <img src={TQ} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
@@ -52,13 +63,17 @@ const StaticEvents = () => {
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Lecture Hall 1/2</h6>
               </div>
-              <button className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105">
+              <button
+                onClick={handleClick}
+                id="TQ"
+                className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105"
+              >
                 Register Now!
               </button>
             </div>
           </div>
           <div
-            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
+            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col sm:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
             style={{ backgroundImage: `url(${bg})` }}
           >
             <img src={TH} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
@@ -71,13 +86,17 @@ const StaticEvents = () => {
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Mehek/IC</h6>
               </div>
-              <button className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105">
+              <button
+                onClick={handleClick}
+                id="TH"
+                className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105"
+              >
                 Register Now!
               </button>
             </div>
           </div>
           <div
-            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col mxl:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
+            className="bg-bottom bg-contain sm:bg-right bg-no-repeat w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] rounded-2xl overflow-hidden flex flex-col sm:flex-row justify-between border-white border-2 transition-all duration-300 hover:flex-grow"
             style={{ backgroundImage: `url(${bg})` }}
           >
             <img src={CC} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
@@ -90,12 +109,17 @@ const StaticEvents = () => {
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Room No. 231 & 237</h6>
               </div>
-              <button className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105">
+              <button
+                onClick={handleClick}
+                id="CC"
+                className="text-white text-xl font-bold text-center bg-gradient-to-tr from-[#533377] to-[#8c35dd] h-max px-4 py-2 rounded-lg mb-4 transition-all duration-[0.3s] hover:scale-105"
+              >
                 Register Now!
               </button>
             </div>
           </div>
         </div>
+        <Form buttonId={buttonId} />
       </div>
       <Footer />
     </>
