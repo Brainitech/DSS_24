@@ -91,7 +91,7 @@ const Form = ({ buttonId }) => {
     document.querySelector(".reg-form").style.display = "none"
   }
   const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : "Coder's Cup"
-  console.log(buttonId, event)
+  // console.log(buttonId, event)
 
   React.useEffect(() => {
     setData((data) => ({
@@ -234,7 +234,7 @@ const Form = ({ buttonId }) => {
                 id="numberOfMembers"
                 name="numberOfMembers"
                 min="2"
-                max="6"
+                max="3"
                 className="rounded-md bg-gray-600 bg-opacity-30 border-gray-600 border-2"
                 onChange={onChangeHandler}
                 value={data.numberOfMembers}

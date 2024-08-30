@@ -90,12 +90,12 @@ export default function Speakers() {
             text="Nikhil Saini, CEO and Founder of Iris Aerial Innovations, leads a top GIS startup specializing in drone-based solutions for surveying, mapping, and monitoring. With expertise in LiDAR, satellite photogrammetry, and GIS, his company provides precise, innovative solutions. He has lectured at IRICEN, IIT Delhi, and pioneered Drone LiDAR in mining."
             isAlternate={true}
           />
-          <Speakercard
+          {/* <Speakercard
             pic={speak3}
             name="Shikhar Goel"
             text="Shikhar Goel is the CTO of GeeksforGeeks, leading the technical team and developing innovative products like GeeksforGeeks Courses, IDE, and Practice. A coder, competitive programmer, and mentor, he graduated from JIIT Noida in 2015 and joined GeeksforGeeks in 2016. He was recognized as a top young CTO in India."
             isAlternate={false}
-          />
+          /> */}
         </div>
       </div>
     </div>

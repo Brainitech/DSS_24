@@ -154,7 +154,7 @@ function Sponsors() {
                 unstop
                 <img src={UNstop} className="w-[60%]" />
               </div>
-              <div className="carrossel-item font-bold flex flex-col">
+              {/*<div className="carrossel-item font-bold flex flex-col">
                 Sponsor-6
                 <MdEmail />
               </div>
@@ -165,6 +165,18 @@ function Sponsors() {
               <div className="carrossel-item font-bold flex flex-col">
                 Sponsor-4
                 <MdEmail />
+              </div>*/}
+              <div className="carrossel-item font-bold flex flex-col">
+                NoticeBard
+                <img src={Noticebard} className="w-[80%]" />
+              </div>
+              <div className="carrossel-item font-bold flex flex-col">
+                AIMERZ
+                <img src={AimersAi} className="w-[80%]" />
+              </div>
+              <div className="carrossel-item font-bold flex flex-col">
+                unstop
+                <img src={UNstop} className="w-[60%]" />
               </div>
               <div className="carrossel-item font-bold flex flex-col">
                 NoticeBard
