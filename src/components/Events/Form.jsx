@@ -80,7 +80,7 @@ const Form = ({ buttonId }) => {
           eventName: "",
         })
       } else {
-        alert(response.data.message)
+        alert(response.data.error)
       }
     } catch (error) {
       console.log(error)
