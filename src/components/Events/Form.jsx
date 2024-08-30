@@ -63,6 +63,20 @@ const Form = ({ buttonId }) => {
       const response = await axios.post(`${url}/api/v1/user/register`, data)
       if (response.data.success) {
         alert("Registration successful")
+        setData({
+        name: "",
+        email: "",
+        college: "",
+        phone: "",
+        teamName: "",
+        teamCollege: "",
+        numberOfMembers: 2,
+        members: [
+          { name: "", phone: "", email: "" },
+          { name: "", phone: "", email: "" },
+        ],
+        isTeam: false,
+      });
       } else {
         alert(response.data.message)
       }
@@ -78,7 +92,7 @@ const Form = ({ buttonId }) => {
   console.log(buttonId, test)
 
   return (
-    <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-hidden cursor-none" style={{ display: `none` }}>
+    <div className="reg-form absolute flex-col backdrop-blur-md rounded-2xl items-center overflow-hidden cursor-none w-[60vw] md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
       <button
         onClick={HideForm}
         className="bg-gray-400 rounded-full px-[10px] pt-[4px] text-center border-black border-2 text-white self-end absolute mt-2 mr-2 hover:scale-110 transition-all duration-200"
