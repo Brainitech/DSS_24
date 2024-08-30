@@ -18,6 +18,7 @@ const Form = ({ buttonId }) => {
       { name: "", phone: "", email: "" },
     ],
     isTeam: false,
+    eventName: ""
   })
 
   const onChangeHandler = (event) => {
@@ -76,6 +77,7 @@ const Form = ({ buttonId }) => {
           { name: "", phone: "", email: "" },
         ],
         isTeam: false,
+        eventName: ""  
       });
       } else {
         alert(response.data.message)
@@ -88,8 +90,12 @@ const Form = ({ buttonId }) => {
   const HideForm = () => {
     document.querySelector(".reg-form").style.display = "none"
   }
-  const test = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : "Coder's Cup"
-  console.log(buttonId, test)
+  const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : "Coder's Cup"
+  console.log(buttonId, event);
+  setData((data) => ({
+      ...data,
+      eventName: event,
+  }))
 
   return (
     <div className="reg-form absolute flex-col backdrop-blur-md rounded-2xl items-center overflow-hidden cursor-none w-[60vw] md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
