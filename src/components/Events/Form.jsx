@@ -3,7 +3,7 @@ import axios from "axios"
 import "./form.css"
 
 const Form = ({ buttonId }) => {
-  const url = "http://dss24.onrender.com"
+  const url = "https://dss24.onrender.com"
   const [registrationType, setRegistrationType] = useState("solo")
   const [data, setData] = useState({
     name: "",
