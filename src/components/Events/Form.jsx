@@ -18,7 +18,7 @@ const Form = ({ buttonId }) => {
       { name: "", phone: "", email: "" },
     ],
     isTeam: false,
-    eventName: ""
+    eventName: "",
   })
 
   const onChangeHandler = (event) => {
@@ -65,20 +65,20 @@ const Form = ({ buttonId }) => {
       if (response.data.success) {
         alert("Registration successful")
         setData({
-        name: "",
-        email: "",
-        college: "",
-        phone: "",
-        teamName: "",
-        teamCollege: "",
-        numberOfMembers: 2,
-        members: [
-          { name: "", phone: "", email: "" },
-          { name: "", phone: "", email: "" },
-        ],
-        isTeam: false,
-        eventName: ""  
-      });
+          name: "",
+          email: "",
+          college: "",
+          phone: "",
+          teamName: "",
+          teamCollege: "",
+          numberOfMembers: 2,
+          members: [
+            { name: "", phone: "", email: "" },
+            { name: "", phone: "", email: "" },
+          ],
+          isTeam: false,
+          eventName: "",
+        })
       } else {
         alert(response.data.message)
       }
@@ -91,14 +91,17 @@ const Form = ({ buttonId }) => {
     document.querySelector(".reg-form").style.display = "none"
   }
   const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : "Coder's Cup"
-  console.log(buttonId, event);
-  setData((data) => ({
+  console.log(buttonId, event)
+
+  React.useEffect(() => {
+    setData((data) => ({
       ...data,
       eventName: event,
-  }))
+    }))
+  }, [])
 
   return (
-    <div className="reg-form absolute flex-col backdrop-blur-md rounded-2xl items-center overflow-hidden cursor-none w-[60vw] md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
+    <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-hidden cursor-none w-max md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
       <button
         onClick={HideForm}
         className="bg-gray-400 rounded-full px-[10px] pt-[4px] text-center border-black border-2 text-white self-end absolute mt-2 mr-2 hover:scale-110 transition-all duration-200"
@@ -106,7 +109,7 @@ const Form = ({ buttonId }) => {
         X
       </button>
       <h2 className="font-bold text-white text-center mb-4 pt-8 pb-4 text-xl w-full bg-black bg-opacity-30">
-        {test}
+        {event}
         <br />
         Register as:
       </h2>
