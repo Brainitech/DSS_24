@@ -53,7 +53,7 @@ const Navbar = () => {
             Contact Us
           </a>
           <a
-            href="https://drive.google.com/uc?export=download&id=1CeJ60DROBXN3FVhAGIEbDZ4uVUYmhDki"
+            href="https://drive.google.com/uc?export=download&id=123oWgGjhl2kriLzebqtbe7R8zTZrK-lV"
             className=" text-white bg-slate-800 hover:bg-slate-500 rounded-lg px-4 py-1 font-semibold transition-all duration-300"
           >
             <FontAwesomeIcon icon={faDownload} /> Brochure
