@@ -111,7 +111,7 @@ const StaticEvents = () => {
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Top 2 from each of 4 groups advance to 8-player eliminatory round, leading to semi-finals and finals.</h5>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Team Size:</h6>
-                <h6 className="font-normal">&nbsp;Solo (Parting will be done on site)</h6>
+                <h6 className="font-normal">&nbsp;Solo (Pairing will be done on site)</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Room No. 231 & 237</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>

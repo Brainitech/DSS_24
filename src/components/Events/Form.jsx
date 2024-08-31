@@ -102,7 +102,7 @@ const Form = ({ buttonId }) => {
   console.log("Selected event", event)
 
   return (
-    <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-scroll h-[80vh] cursor-none w-max md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
+    <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-hidden h-[80vh] cursor-none w-max md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
       <button
         onClick={HideForm}
         className="bg-gray-400 rounded-full px-[10px] pt-[4px] text-center border-black border-2 text-white self-end absolute mt-2 mr-2 hover:scale-110 transition-all duration-200"
@@ -151,7 +151,7 @@ const Form = ({ buttonId }) => {
         )}
       </div>
 
-      <form className="form flex flex-col items-center" onSubmit={sendData}>
+      <form className="form overflow-scroll  [&::-webkit-scrollbar]:hidden [scrollbar-width]:hidden [-ms-overflow-style]:hidden flex flex-col items-center" onSubmit={sendData}>
         {registrationType === "solo" && (
           <div className="flex flex-col justify-center items-center gap-8 mx-4 my-2 text-white">
             <div className="flex flex-col">
