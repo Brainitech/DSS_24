@@ -90,8 +90,8 @@ const Form = ({ buttonId }) => {
   const HideForm = () => {
     document.querySelector(".reg-form").style.display = "none"
   }
-  const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : "Coder's Cup"
-  // console.log(buttonId, event)
+  const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
+  console.log(buttonId, event)
 
   React.useEffect(() => {
     setData((data) => ({
@@ -99,9 +99,10 @@ const Form = ({ buttonId }) => {
       eventName: event,
     }))
   }, [])
+  console.log("Selected event", event)
 
   return (
-    <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-hidden cursor-none w-max md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
+    <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-scroll h-[80vh] cursor-none w-max md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
       <button
         onClick={HideForm}
         className="bg-gray-400 rounded-full px-[10px] pt-[4px] text-center border-black border-2 text-white self-end absolute mt-2 mr-2 hover:scale-110 transition-all duration-200"
@@ -130,23 +131,24 @@ const Form = ({ buttonId }) => {
           />
           <span className="ml-2">Solo</span>
         </label>
-
-        <label className={`relative cursor-none transition-all duration-100 ${registrationType === "team" ? "underline" : "hover:scale-110"}`}>
-          <input
-            type="radio"
-            value="team"
-            checked={registrationType === "team"}
-            onChange={() => {
-              setRegistrationType("team")
-              setData((data) => ({
-                ...data,
-                isTeam: true,
-              }))
-            }}
-            className="hidden"
-          />
-          <span className="ml-2">Team</span>
-        </label>
+        {event !== "Coder's Cup" && (
+          <label className={`relative cursor-none transition-all duration-100 ${registrationType === "team" ? "underline" : "hover:scale-110"}`}>
+            <input
+              type="radio"
+              value="team"
+              checked={registrationType === "team"}
+              onChange={() => {
+                setRegistrationType("team")
+                setData((data) => ({
+                  ...data,
+                  isTeam: true,
+                }))
+              }}
+              className="hidden"
+            />
+            <span className="ml-2">Team</span>
+          </label>
+        )}
       </div>
 
       <form className="form flex flex-col items-center" onSubmit={sendData}>
@@ -239,7 +241,7 @@ const Form = ({ buttonId }) => {
                 onChange={onChangeHandler}
                 value={data.numberOfMembers}
                 onBlur={() => {
-                  const membersCount = Math.max(2, data.numberOfMembers)
+                  const membersCount = Math.min(3, Math.max(2, data.numberOfMembers))
                   setData((data) => ({
                     ...data,
                     members: data.members.slice(0, membersCount).concat(Array(Math.max(0, membersCount - data.members.length)).fill({ name: "", phone: "" })),
