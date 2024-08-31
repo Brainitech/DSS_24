@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios"
 import "./form.css"
 
@@ -17,8 +17,8 @@ const Form = ({ buttonId }) => {
       { name: "", phone: "", email: "" },
       { name: "", phone: "", email: "" },
     ],
-    isTeam: false,
     eventName: "",
+    isTeam: false,
   })
 
   const onChangeHandler = (event) => {
@@ -64,6 +64,7 @@ const Form = ({ buttonId }) => {
       const response = await axios.post(`${url}/api/v1/user/register`, data)
       if (response.data.success) {
         alert("Registration successful")
+        HideForm()
         setData({
           name: "",
           email: "",
@@ -76,11 +77,26 @@ const Form = ({ buttonId }) => {
             { name: "", phone: "", email: "" },
             { name: "", phone: "", email: "" },
           ],
-          isTeam: false,
           eventName: "",
+          isTeam: false,
         })
       } else {
         alert(response.data.error)
+        setData({
+          name: "",
+          email: "",
+          college: "",
+          phone: "",
+          teamName: "",
+          teamCollege: "",
+          numberOfMembers: 2,
+          members: [
+            { name: "", phone: "", email: "" },
+            { name: "", phone: "", email: "" },
+          ],
+          eventName: "",
+          isTeam: false,
+        })
       }
     } catch (error) {
       console.log(error)
@@ -93,12 +109,14 @@ const Form = ({ buttonId }) => {
   const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
   console.log(buttonId, event)
 
-  React.useEffect(() => {
-    setData((data) => ({
-      ...data,
-      eventName: event,
-    }))
-  }, [])
+  useEffect(() => {
+    if (event) {
+      setData((data) => ({
+        ...data,
+        eventName: event,
+      }))
+    }
+  }, [event])
   console.log("Selected event", event)
 
   return (
