@@ -39,6 +39,8 @@ const StaticEvents = () => {
                 <h6 className="font-normal">&nbsp;2-4 Members</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;R&D Department</h6>
+                <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
+                <h6 className="font-normal">&nbsp; 50K</h6>
               </div>
               <button
                 onClick={handleClick}
@@ -62,6 +64,8 @@ const StaticEvents = () => {
                 <h6 className="font-normal">&nbsp;2-3 Members</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Lecture Hall 1/2</h6>
+                <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
+                <h6 className="font-normal">&nbsp; 10K</h6>
               </div>
               <button
                 onClick={handleClick}
@@ -85,6 +89,8 @@ const StaticEvents = () => {
                 <h6 className="font-normal">&nbsp;1-3 Members</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Mehek/IC</h6>
+                <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
+                <h6 className="font-normal">&nbsp; 10K</h6>
               </div>
               <button
                 onClick={handleClick}
@@ -108,6 +114,8 @@ const StaticEvents = () => {
                 <h6 className="font-normal">&nbsp;Solo (Parting will be done on site)</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Room No. 231 & 237</h6>
+                <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
+                <h6 className="font-normal">&nbsp; 20K</h6>
               </div>
               <button
                 onClick={handleClick}
