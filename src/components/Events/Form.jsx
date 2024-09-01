@@ -80,6 +80,7 @@ const Form = ({ buttonId }) => {
           eventName: "",
           isTeam: false,
         })
+        window.location.reload()
       } else {
         alert(response.data.error)
         setData({
@@ -107,7 +108,7 @@ const Form = ({ buttonId }) => {
     document.querySelector(".reg-form").style.display = "none"
   }
   const event = buttonId === "HnF" ? "Hack & Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
-  console.log(buttonId, event)
+  // console.log(buttonId, event)
 
   useEffect(() => {
     if (event) {
@@ -117,8 +118,10 @@ const Form = ({ buttonId }) => {
       }))
     }
   }, [event])
-  console.log("Selected event", event)
-
+  // console.log("Selected event", event)
+  const Submitclk = () => {
+    console.log("Submit button clicked for", event, "on", registrationType, "registration")
+  }
   return (
     <div className="reg-form absolute flex-col bgg backdrop-blur-md rounded-2xl items-center overflow-hidden h-[80vh] cursor-none w-max md:w-[40vw] lg:w-[30vw]" style={{ display: `none` }}>
       <button
@@ -318,6 +321,7 @@ const Form = ({ buttonId }) => {
         )}
 
         <button
+          onClick={Submitclk}
           type="submit"
           className="submit-btn bg-gradient-to-tr from-[#533377] to-[#8c35dd] w-max text-center px-8 py-[0.25rem] rounded-md my-4 font-bold text-white hover:scale-110 transition-all duration-300 cursor-none"
         >
