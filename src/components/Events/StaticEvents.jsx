@@ -36,7 +36,7 @@ const StaticEvents = () => {
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Problem statements released an hour before the Hackathon; final solutions presented the next day.</h5>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Team Size:</h6>
-                <h6 className="font-normal">&nbsp;2-4 Members</h6>
+                <h6 className="font-normal">&nbsp;1-3 Members</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;R&D Department</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
@@ -107,7 +107,7 @@ const StaticEvents = () => {
           >
             <img src={CC} className="rounded-2xl w-[300px] h-[300px] sm:w-[400px] sm:h-[400px]" />
             <div className="flex flex-col text-sm items-center justify-between mr-2 min-h-[300px]">
-              <h1 className="text-white text-2xl font-bold text-center mt-4">Coder's Cup</h1>
+              <h1 className="text-white text-2xl font-bold text-center mt-4">Coder&apos;s Cup</h1>
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Top 2 from each of 4 groups advance to 8-player eliminatory round, leading to semi-finals and finals.</h5>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Team Size:</h6>

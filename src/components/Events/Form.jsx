@@ -54,18 +54,21 @@ const Form = ({ buttonId }) => {
 
       membersData.map(async (memberRow) => {
         try {
+          console.log(memberRow);          
           const response = await axios.post(`https://v1.nocodeapi.com/ktejas04/google_sheets/BrVWVtKdfVfbdriJ?tabId=${data.eventName}`, [memberRow], {
             headers: {
               "Content-Type": "application/json",
             },
           })
-          return response.data // or any relevant data you want to return
+          if (response.data)
+            return response.data // or any relevant data you want to return
         } catch (error) {
           alert(error)
         }
       })
-
-      alert("Registration successful")
+      
+      
+      alert("Registration successful");
       setRegistrationType("solo")
       HideForm()
 
@@ -73,11 +76,10 @@ const Form = ({ buttonId }) => {
         ...data,
         teamName: "",
         teamCollege: "",
-        yearOfCollege: "",
+        yearOfCollege: "1st",
         numberOfMembers: 1,
         members: [{ name: "", phone: "", email: "" }],
-        eventRegistrationType: "solo",
-        eventName: null,
+        eventRegistrationType: "solo"
       }))
     } catch (error) {
       console.log(error)
@@ -92,6 +94,7 @@ const Form = ({ buttonId }) => {
   const event = buttonId === "HnF" ? "Hack n Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
 
   useEffect(() => {
+    console.log(event);
     if (event) {
       setData((data) => ({
         ...data,
