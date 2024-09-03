@@ -24,16 +24,74 @@ const Form = ({ buttonId }) => {
   }
 
   const onMemberChangeHandler = (index, event) => {
-    const updatedMembers = data.members.map((member, i) => (i === index ? { ...member, [event.target.name]: event.target.value } : member))
+    const { name, value } = event.target;
+
+    const updatedMembers = data.members.map((member, i) => (i === index ? { ...member, [name]: value } : member))
     setData((data) => ({
       ...data,
       members: updatedMembers,
     }))
   }
 
+  const HideForm = () => {
+    document.querySelector(".reg-form").style.display = "none"
+  }
+  const event = buttonId === "HnF" ? "Hack n Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
+
+  useEffect(() => {
+    // console.log(event);
+    if (event) {
+      setData((data) => ({
+        ...data,
+        eventName: event,
+      }))
+    }
+  }, [event])
+  
+  const validatePhone = (phone) => {
+    return /^\d{10}$/.test(phone);
+  }
+
+  const validateName = (name) => {
+    return name.trim().length > 0 && name.trim().length <= 30;
+  }
+
+  const validateEmail = (email) => {
+    return email.trim().length > 0 && email.trim().length <= 40 && /\S+@\S+\.\S+/.test(email);
+  }
+
+  const validateMember = (member) => {
+    return validateName(member.name) && validatePhone(member.phone) && validateEmail(member.email);
+  }
+
+  const isFormValid = () => {
+    if (registrationType === "solo") {
+      return validateMember(data.members[0]) && data.teamCollege.trim() !== "";
+    } else if (registrationType === "team") {
+      return (
+        data.teamName.trim() !== "" &&
+        data.teamCollege.trim() !== "" &&
+        data.members.every(validateMember)
+      );
+    }
+    return false;
+  }
+
+  const handleSubmit = () => {
+    console.log("Submit button clicked for", event, "on", registrationType, "registration")
+    // document.querySelector(".form-loader").style.display = "flex"
+  }
+
   const sendData = async (event) => {
-    event.preventDefault()
-    setIsLoading(true)
+    console.log(data);
+    event.preventDefault();
+    
+    if (!isFormValid()) {
+      console.log("Please fill all fields correctly before submitting.");
+      alert("Please fill all fields correctly before submitting.");
+      return;
+    }
+    setIsLoading(true);
 
     try {
       setData((data) => ({
@@ -63,7 +121,9 @@ const Form = ({ buttonId }) => {
           if (response.data)
             return response.data // or any relevant data you want to return
         } catch (error) {
-          alert(error)
+          console.error(error);
+          alert("An error occurred while submitting the form. Please re-submit.");
+          return;
         }
       })
       
@@ -82,41 +142,11 @@ const Form = ({ buttonId }) => {
         eventRegistrationType: "solo"
       }))
     } catch (error) {
-      console.log(error)
+      console.log(error);
+      alert("An error occurred while processing your request.");
     } finally {
-      setIsLoading(false) // Hide loader after form submission is complete
+      setIsLoading(false);
     }
-  }
-
-  const HideForm = () => {
-    document.querySelector(".reg-form").style.display = "none"
-  }
-  const event = buttonId === "HnF" ? "Hack n Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
-
-  useEffect(() => {
-    console.log(event);
-    if (event) {
-      setData((data) => ({
-        ...data,
-        eventName: event,
-      }))
-    }
-  }, [event])
-  const Submitclk = () => {
-    console.log("Submit button clicked for", event, "on", registrationType, "registration")
-    // document.querySelector(".form-loader").style.display = "flex"
-  }
-
-  const isFormValid = () => {
-    if (registrationType === "solo") {
-      const { name, email, phone } = data.members[0]
-      return name.trim() !== "" && email.trim() !== "" && phone.trim() !== ""
-    } else if (registrationType === "team") {
-      const { teamName, teamCollege } = data
-      const membersValid = data.members.every((member) => member.name.trim() !== "" && member.email.trim() !== "" && member.phone.trim() !== "")
-      return teamName.trim() !== "" && teamCollege.trim() !== "" && membersValid
-    }
-    return false
   }
 
   return (
@@ -192,10 +222,13 @@ const Form = ({ buttonId }) => {
                 onChange={(event) => onMemberChangeHandler(0, event)}
                 value={data.members[0].name}
                 placeholder="Full Name"
+                maxLength={30}
+                pattern="[A-Za-z\s]+"
+                title="Please enter only alphabets"
               />
             </div>
             <div className="flex flex-col mx-8">
-              <label htmlFor="teamCollege">College </label>
+              <label htmlFor="teamCollege">College</label>
               <input
                 type="text"
                 id="teamCollege"
@@ -204,6 +237,8 @@ const Form = ({ buttonId }) => {
                 name="teamCollege"
                 onChange={onChangeHandler}
                 value={data.teamCollege}
+                pattern="[A-Za-z\s]+"
+                title="Please enter only alphabets"
               />
             </div>
             <div className="flex flex-col mx-8">
@@ -233,18 +268,22 @@ const Form = ({ buttonId }) => {
                 onChange={(event) => onMemberChangeHandler(0, event)}
                 value={data.members[0].email}
                 placeholder="Email"
+                maxLength={35}
               />
             </div>
             <div className="flex flex-col mx-8">
               <label htmlFor="memberPhone">Phone </label>
               <input
-                type="text"
+                type="tel"
                 id="memberPhone"
                 className="rounded-md border-gray-500 border-2 bg-gray-500 bg-opacity-50"
                 name="phone"
                 onChange={(event) => onMemberChangeHandler(0, event)}
                 value={data.members[0].phone}
                 placeholder="Phone"
+                pattern="\d{10}"
+                maxLength={10}
+                title="Please enter 10 digits"
               />
             </div>
           </>
@@ -258,7 +297,15 @@ const Form = ({ buttonId }) => {
             </div>
             <div className="flex flex-col mx-8">
               <label htmlFor="teamCollege">College </label>
-              <input type="text" id="teamCollege" name="teamCollege" className="rounded-md border-gray-500 border-2 bg-gray-500 bg-opacity-50" onChange={onChangeHandler} value={data.teamCollege} />
+              <input 
+                type="text"
+                id="teamCollege" 
+                name="teamCollege" 
+                className="rounded-md border-gray-500 border-2 bg-gray-500 bg-opacity-50" 
+                onChange={onChangeHandler} 
+                value={data.teamCollege} 
+                pattern="[A-Za-z\s]+"
+                title="Please enter only alphabets" />
             </div>
             <div className="flex flex-col mx-8">
               <label htmlFor="yearOfCollege">Year of College</label>
@@ -307,6 +354,9 @@ const Form = ({ buttonId }) => {
                     name="name"
                     onChange={(event) => onMemberChangeHandler(index, event)}
                     value={member.name}
+                    maxLength={30}
+                    pattern="[A-Za-z\s]+"
+                    title="Please enter only alphabets"
                   />
                 </div>
                 <div className="flex flex-col mx-8">
@@ -318,17 +368,21 @@ const Form = ({ buttonId }) => {
                     name="email"
                     onChange={(event) => onMemberChangeHandler(index, event)}
                     value={member.email}
+                    maxLength={35}
                   />
                 </div>
                 <div className="flex flex-col mx-8">
                   <label htmlFor={`memberPhone${index}`}>Member {index + 1} Phone </label>
                   <input
-                    type="text"
+                    type="tel"
                     id={`memberPhone${index}`}
                     className="rounded-md border-gray-500 border-2 bg-gray-500 bg-opacity-50"
                     name="phone"
                     onChange={(event) => onMemberChangeHandler(index, event)}
                     value={member.phone}
+                    pattern="\d{10}"
+                    maxLength={10}
+                    title="Please enter only numbers"
                   />
                 </div>
               </div>
@@ -337,8 +391,7 @@ const Form = ({ buttonId }) => {
         )}
 
         <button
-          onClick={Submitclk}
-          disabled={isLoading || !isFormValid()} // Disable the button if the form is not valid
+          onClick={handleSubmit}
           type="submit"
           className="submit-btn bg-gradient-to-tr from-[#533377] to-[#8c35dd] w-max text-center px-8 py-[0.25rem] rounded-md my-4 font-bold text-white hover:scale-110 transition-all duration-300 cursor-none"
         >

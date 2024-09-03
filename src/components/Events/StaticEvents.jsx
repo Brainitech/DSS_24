@@ -61,7 +61,7 @@ const StaticEvents = () => {
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Teams tackle 20 tech questions plus an audience question in Prelims. Top 6-7 advance to Finals for head-to-head challenges.</h5>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Team Size:</h6>
-                <h6 className="font-normal">&nbsp;2-3 Members</h6>
+                <h6 className="font-normal">&nbsp;1-3 Members</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;Lecture Hall 1/2</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
