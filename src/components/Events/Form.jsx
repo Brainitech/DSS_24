@@ -41,12 +41,12 @@ const Form = ({ buttonId }) => {
         eventRegistrationType: registrationType,
       }))
 
-      const membersData = data.members.map((member, index) => [
-        index === 0 ? new Date().toLocaleString() : "",
-        index === 0 ? data.eventRegistrationType : "",
-        index === 0 ? data.teamName : "",
-        index === 0 ? data.teamCollege : "",
-        index === 0 ? data.yearOfCollege : "",
+      const membersData = data.members.map(member => [
+        new Date().toLocaleString(),
+        data.eventRegistrationType,
+        data.teamName,
+        data.teamCollege,
+        data.yearOfCollege,
         member.name,
         member.email,
         member.phone,
