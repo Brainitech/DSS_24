@@ -35,11 +35,20 @@ const Form = ({ buttonId }) => {
 
   const HideForm = () => {
     document.querySelector(".reg-form").style.display = "none"
+    setRegistrationType("solo")
+    setData((data) => ({
+      ...data,
+      numberOfMembers: 1,
+      members: [
+        { name: "", phone: "", email: "" },
+      ],
+      eventRegistrationType: "solo"
+    }))
   }
   const event = buttonId === "HnF" ? "Hack n Forge" : buttonId === "TQ" ? "Tech Quiz" : buttonId === "TH" ? "Treasure Trail" : buttonId === "CC" ? "Coder's Cup" : null
 
   useEffect(() => {
-    // console.log(event);
+    console.log(event);
     if (event) {
       setData((data) => ({
         ...data,
@@ -325,14 +334,15 @@ const Form = ({ buttonId }) => {
                 name="numberOfMembers"
                 className="rounded-md border-gray-500 border-2 bg-gray-500 bg-opacity-50"
                 min="2"
-                max="3"
+                max={event === "Hack n Forge" ? "4" : "3"}
                 onChange={onChangeHandler}
                 value={data.numberOfMembers}
                 onBlur={() => {
                   let { numberOfMembers } = data
 
-                  // Clamp the numberOfMembers value between 2 and 3
-                  numberOfMembers = Math.min(Math.max(numberOfMembers, 2), 3)
+                  // Clamp the numberOfMembers value between 2 and 4
+                  
+                  numberOfMembers = Math.min(Math.max(numberOfMembers, 2), 4)
 
                   setData((data) => ({
                     ...data,

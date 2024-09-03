@@ -36,7 +36,7 @@ const StaticEvents = () => {
               <div className="flex flex-col text-white text-left ml-2">
                 <h5 className="flex flex-row mb-1 sm:mb-4">Problem statements released an hour before the Hackathon; final solutions presented the next day.</h5>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Team Size:</h6>
-                <h6 className="font-normal">&nbsp;1-3 Members</h6>
+                <h6 className="font-normal">&nbsp;1-4 Members</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Location:</h6>
                 <h6 className="font-normal">&nbsp;R&D Department</h6>
                 <h6 className="flex flex-row font-bold mt-1 sm:mt-2">Cash Prizes:</h6>
