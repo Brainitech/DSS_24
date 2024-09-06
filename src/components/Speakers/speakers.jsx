@@ -48,7 +48,7 @@ export function Speakercard(props) {
     <div className="w-64 h-80 sm:w-72 sm:h-96 bg-gradient-to-br from-[#f505d5] to-[#01d4fe] rounded-3xl flex justify-center items-center group overflow-hidden">
       <div className={`w-[15.75rem] h-[19.75rem] sm:w-[17.75rem] sm:h-[23.75rem] bg-cover bg-center rounded-3xl`} style={{ backgroundImage: `url(${pic})` }}>
         <div className="h-[19.75rem] sm:h-[13.75rem] translate-y-64 sm:translate-y-80 group-hover:translate-y-24 sm:group-hover:translate-y-40 bg-black bg-opacity-40 group-hover:bg-opacity-70 group-hover:backdrop-blur-sm  transition-all duration-700 ease-in-out rounded-3xl">
-          <div className="text-white text-center font-bold font-montserrat text-xl mb-6 pt-4">{name}</div>
+          <div className="text-white text-center font-bold font-montserrat text-xl mb-4 pt-4">{name}</div>
           <div className="text-white text-[0.75rem] mx-2">{text}</div>
         </div>
       </div>
